@@ -10,6 +10,10 @@ Based on the stylesheets I use regularly for my own projects, I've decided to po
 
 ## Usage
 
+### Requirements
+
+1. [card-mod](https://github.com/thomasloven/lovelace-card-mod)
+
 ### HACS
 
 [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=PixNyb&repository=https%3A%2F%2Fgithub.com%2FPixNyb%2Fhass-theme-blocky&category=themes)
