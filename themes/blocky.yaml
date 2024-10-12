@@ -1,0 +1,323 @@
+# ---
+# Title: Blocky
+# Author: PixNyb
+# Description: A clean and modern theme for Home Assistant based on the styling used on https://roelc.me
+# ---
+
+Blocky:
+  # Blocky Theme colors
+  clr-white: "rgb(var(--rgb-white))"
+  clr-black: "rgb(var(--rgb-black))"
+  clr-gray: "rgb(var(--rgb-gray))"
+  clr-dark-gray: "rgb(var(--rgb-dark-gray))"
+  clr-background: "rgb(var(--rgb-background))"
+  clr-background-card: "rgb(var(--rgb-background-card))"
+  clr-background-header: "rgba(var(--rgb-background-header), 1)"
+  clr-text: "rgb(var(--rgb-text))"
+  clr-text-secondary: "rgb(var(--rgb-text-secondary))"
+  clr-link: "rgb(var(--rgb-link))"
+  clr-green: "rgb(var(--rgb-green))"
+  clr-red: "rgb(var(--rgb-red))"
+  clr-yellow: "rgb(var(--rgb-yellow))"
+  clr-blue: "rgb(var(--rgb-blue))"
+  clr-teal: "rgb(var(--rgb-teal))"
+  clr-purple: "rgb(var(--rgb-purple))"
+  clr-orange: "rgb(var(--rgb-orange))"
+
+  clr-primary: var(--clr-blue)
+  rgb-primary: var(--rgb-blue)
+  clr-secondary: var(--clr-teal)
+  rgb-secondary: var(--rgb-teal)
+  clr-tertiary: var(--clr-green)
+  rgb-tertiary: var(--rgb-green)
+  clr-quaternary: var(--clr-purple)
+  rgb-quaternary: var(--rgb-purple)
+
+  # Main Interface Colors
+  divider-color: var(--clr-background)
+  disabled-color: var(--clr-dark-gray)
+  rgb-disabled-color: var(--rgb-dark-gray)
+  error-color: var(--clr-red)
+  rgb-error-color: var(--rgb-red)
+  warning-color: var(--clr-yellow)
+  rgb-warning-color: var(--rgb-yellow)
+  success-color: var(--clr-green)
+  rgb-success-color: var(--rgb-green)
+  info-color: var(--clr-blue)
+  rgb-info-color: var(--rgb-blue)
+  rgb-primary-color: var(--rgb-primary)
+  accent-color: var(--clr-secondary)
+  rgb-accent-color: var(--rgb-secondary)
+  accent-color-2: var(--clr-tertiary)
+  rgb-accent-color-2: var(--rgb-tertiary)
+  accent-color-3: var(--clr-quaternary)
+  rgb-accent-color-3: var(--rgb-quaternary)
+
+  # Text Colors
+  text-primary-color: var(--clr-text)
+  primary-text-color: var(--clr-text)
+  text-secondary-color: var(--clr-text-secondary)
+  secondary-text-color: var(--clr-text-secondary)
+  text-disabled-color: var(--clr-text-disabled)
+  disabled-text-color: var(--clr-text-disabled)
+  accent-text-color: var(--clr-gray)
+  text-accent-color: var(--accent-text-color)
+
+  lovelace-background: var(--clr-background)
+  primary-background-color: var(--clr-background)
+  secondary-background-color: var(--clr-background-card)
+
+  app-header-text-color: var(--clr-text)
+  app-header-selection-bar-color: var(--clr-gray)
+  app-header-edit-background-color: var(--clr-gray)
+  app-header-edit-text-color: var(--clr-text)
+  app-header-border-bottom: none
+  mdc-top-app-bar-fixed-box-shadow: none
+
+  # Sidebar Menu
+  sidebar-icon-color: var(--clr-text-secondary)
+  sidebar-text-color: var(--sidebar-icon-color)
+  sidebar-background-color: var(--clr-background-header)
+  sidebar-selected-icon-color: var(--primary-color)
+  sidebar-selected-text-color: var(--sidebar-selected-icon-color)
+
+  # Icons
+  icon-primary-color: currentcolor
+  paper-item-icon-color: var(--icon-primary-color)
+  paper-item-icon-active-color: var(--primary-color)
+  mdc-button-outline-color: var(--primary-color)
+  mdc-button-outline-width: 1px
+
+  # States and Badges
+  state-icon-color: var(--paper-item-icon-color)
+  state-icon-active-color: var(--paper-item-icon-active-color)
+  state-icon-unavailable-color: var(--disabled-text-color)
+
+  # Sliders
+  paper-slider-knob-color: var(--primary-color)
+  paper-slider-knob-start-color: var(--paper-slider-knob-color)
+  paper-slider-pin-color: var(--paper-slider-knob-color)
+  paper-slider-active-color: var(--paper-slider-knob-color)
+  paper-slider-secondary-color: var(--primary-color)
+
+  # Labels
+  label-badge-background-color: var(--clr-background-card)
+  label-badge-text-color: var(--clr-text)
+  label-badge-red: var(--clr-red)
+  label-badge-green: var(--clr-green)
+  label-badge-blue: var(--primary-color)
+  label-badge-yellow: var(--clr-yellow)
+  label-badge-gray: var(--clr-gray)
+
+  # Cards
+  card-background-color: var(--clr-background-card)
+  ha-card-background: var(--clr-background-card)
+  ha-card-border-color: transparent
+  paper-dialog-background-color: var(--card-background-color)
+  paper-listbox-background-color: var(--card-background-color)
+  paper-card-background-color: var(--card-background-color)
+  ha-card-border-radius: 0
+  ha-config-card-border-radius: 0
+  ha-dialog-border-radius: 0
+  mdc-shape-small: 0
+  ha-card-border-width: 0
+
+  # Switches
+  switch-checked-button-color: var(--primary-color)
+  switch-checked-track-color: var(--primary-color)
+  switch-unchecked-button-color: var(--clr-gray)
+  switch-unchecked-track-color: var(--clr-dark-gray)
+
+  # Toggles
+  paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
+  paper-toggle-button-checked-bar-color: var(--switch-checked-track-color)
+  paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color)
+  paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
+
+  # Table
+  table-row-background-color: var(--clr-background)
+  table-row-alternative-background-color: var(--clr-background-card)
+  data-table-background-color: var(--clr-background)
+
+  # Dropdowns
+  material-background-color: var(--clr-background-card)
+  material-secondary-background-color: var(--clr-background)
+  mdc-theme-surface: var(--clr-background-card)
+
+  # Pre/Code
+  markdown-code-background-color: var(--clr-background-card)
+  code-editor-background-color: var(--clr-background-card)
+
+  # Checkboxes
+  mdc-checkbox-unchecked-color: var(--clr-gray)
+  mdc-checkbox-disable-color: var(--disabled-text-color)
+
+  # Input
+  input-fill-color: var(--clr-background-card)
+  input-dropdown-icon-color: var(--icon-primary-color)
+  input-ink-color: var(--clr-text)
+  input-label-ink-color: var(--clr-text)
+  input-idle-line-color: var(--clr-text)
+  input-hover-line-color: var(--primary-color)
+
+  mdc-select-fill-color: var(--input-fill-color)
+  mdc-select-ink-color: var(--input-ink-color)
+  mdc-select-label-ink-color: var(--input-label-ink-color)
+  mdc-select-idle-line-color: var(--input-idle-line-color)
+  mdc-select-dropdown-icon-color: var(--input-dropdown-icon-color)
+  mdc-select-hover-line-color: var(--input-hover-line-color)
+  mdc-text-field-fill-color: var(--input-fill-color)
+  mdc-text-field-ink-color: var(--input-ink-color)
+  mdc-text-field-label-ink-color: var(--input-label-ink-color)
+  mdc-text-field-idle-line-color: var(--input-idle-line-color)
+  mdc-text-field-dropdown-icon-color: var(--input-dropdown-icon-color)
+  mdc-text-field-hover-line-color: var(--input-hover-line-color)
+
+  feature-border-radius: 0
+  md-dialog-container-shape: 0
+  control-switch-border-radius: 0
+
+  mini-media-player-button-color: rgba(var(--rgb-background), .6)
+
+  stack-card-gap: 1rem
+  grid-card-gap: 1rem
+  masonry-view-card-margin: 0.5rem 0.5rem 1rem
+
+  # Card-Mod
+  card-mod-theme: "Blocky"
+
+  card-mod-root-yaml: |
+    $ha-card: |
+      :host {
+        background: red;
+      }
+
+  card-mod-sidebar-yaml: |
+    .: |
+      a.iron-selected paper-icon-item::before {
+        border-radius: 0;
+      }
+    a.profile paper-icon-item ha-user-badge:
+      $: |
+        .initials {
+          border-radius: 0 !important;
+        }
+
+  card-mod-view-yaml: |
+    "*:first-child":
+      $:
+        .: |
+          hui-view-badges {
+            margin-bottom: 4px !important;
+          }
+          div.edit-mode hui-card-options:hover {
+            outline: 0.5rem solid var(--clr-dark-gray);
+          }
+        hui-view-badges:
+          $:
+            hui-entity-badge:
+              $:
+                ha-badge:
+                  $: |
+                    .badge {
+                      border-radius: 0 !important;
+                    }
+
+  card-mod-card-yaml: |
+    .: |
+      ha-card.type-tile {
+        padding: 7px;
+      }
+    ha-full-calendar:
+      $:
+        ha-button-toggle-group:
+          $: |
+            ha-icon-button {
+              border-radius: 0 !important;
+            }
+    ha-tile-icon:
+      $: |
+        .shape {
+          --mdc-icon-size: 24px;
+          border-radius: 0 !important;
+          width: 40px !important;
+          height: 40px !important;
+        }
+    hui-card-features:
+      $:
+        .: |
+          .container {
+            padding: 0 10px 10px 10px !important;
+          }
+        hui-card-feature:
+          $:
+            .: |
+              :host {
+                --feature-border-radius: 0 !important;
+              }
+            "*:first-child":
+              $:
+                ha-control-slider:
+                  $: |
+                    .slider-track-bar {
+                      border-radius: 0 !important;
+                    }
+                    .slider-track-bar::after {
+                      border-radius: 0 !important;
+                    }
+    mmp-shortcuts:
+      $:
+        .mmp-shortcuts__buttons:
+          .: |
+            .mmp-shortcuts__button {
+              color: var(--clr-text);
+              border-radius: 0;
+              box-shadow: none;
+              transition: background .3s;
+            }
+            .mmp-shortcuts__button:hover {
+              background: var(--clr-background-card);
+            }
+
+  modes:
+    light:
+      rgb-white: "255, 255, 255"
+      rgb-black: "0, 0, 0"
+      rgb-gray: "248, 248, 248"
+      rgb-dark-gray: "95, 99, 104"
+      rgb-background: var(--rgb-white)
+      rgb-background-card: var(--rgb-gray)
+      rgb-background-header: var(--rgb-background)
+      rgb-text: var(--rgb-black)
+      rgb-text-secondary: var(--rgb-dark-gray)
+      rgb-link: "107, 107, 107"
+      rgb-green: "34, 139, 34"
+      rgb-red: "178, 34, 34"
+      rgb-yellow: "218, 165, 32"
+      rgb-blue: "30, 144, 255"
+      rgb-teal: "0, 128, 128"
+      rgb-purple: "128, 0, 128"
+      rgb-orange: "255, 140, 0"
+      app-header-background-color: "#FFFFFF" #The RGB value of rgb-background as variables aren't supported in this field
+      primary-color: "#1E90FF" #The RGB value of rgb-blue as variables aren't supported in this field
+
+    dark:
+      rgb-white: "208, 208, 208"
+      rgb-black: "29, 29, 29"
+      rgb-gray: "39, 39, 39"
+      rgb-dark-gray: "95, 99, 104"
+      rgb-background: var(--rgb-black)
+      rgb-background-card: var(--rgb-gray)
+      rgb-background-header: var(--rgb-background)
+      rgb-text: var(--rgb-white)
+      rgb-text-secondary: "140, 140, 140"
+      rgb-link: "161, 161, 161"
+      rgb-green: "50, 205, 50"
+      rgb-red: "255, 99, 71"
+      rgb-yellow: "255, 215, 0"
+      rgb-blue: "30, 144, 255"
+      rgb-teal: "32, 178, 170"
+      rgb-purple: "147, 112, 219"
+      rgb-orange: "255, 140, 0"
+      app-header-background-color: "#1D1D1D" #The RGB value of rgb-background as variables aren't supported in this field
+      primary-color: "#1E90FF" #The RGB value of rgb-blue as variables aren't supported in this field
