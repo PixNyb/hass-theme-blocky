@@ -2,11 +2,11 @@
 
 Based on the stylesheets I use regularly for my own projects, I've decided to port it over to Home Assistant. This theme gives a sleek, modern look to your Home Assistant interface with support for light and dark mode and, when I figure out how, support for custom primary, accent, tertiary and quaternary colors.
 
-| Light mode                                                                                         | Dark mode                                                                                        |
-| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| ![Light mode](https://raw.githubusercontent.com/PixNyb/hass-theme-blocky/main/docs/img/light1.png) | ![Dark mode](https://raw.githubusercontent.com/PixNyb/hass-theme-blocky/main/docs/img/dark1.png) |
-| ![Light mode](https://raw.githubusercontent.com/PixNyb/hass-theme-blocky/main/docs/img/light2.png) | ![Dark mode](https://raw.githubusercontent.com/PixNyb/hass-theme-blocky/main/docs/img/dark2.png) |
-| ![Light mode](https://raw.githubusercontent.com/PixNyb/hass-theme-blocky/main/docs/img/light3.png) | ![Dark mode](https://raw.githubusercontent.com/PixNyb/hass-theme-blocky/main/docs/img/dark3.png) |
+| Light mode                                                                                        | Dark mode                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| ![Light mode](https://github.com/PixNyb/hass-theme-blocky/blob/main/docs/img/light1.png?raw=true) | ![Dark mode](https://github.com/PixNyb/hass-theme-blocky/blob/main/docs/img/dark1.png?raw=true) |
+| ![Light mode](https://github.com/PixNyb/hass-theme-blocky/blob/main/docs/img/light2.png?raw=true) | ![Dark mode](https://github.com/PixNyb/hass-theme-blocky/blob/main/docs/img/dark2.png?raw=true) |
+| ![Light mode](https://github.com/PixNyb/hass-theme-blocky/blob/main/docs/img/light3.png?raw=true) | ![Dark mode](https://github.com/PixNyb/hass-theme-blocky/blob/main/docs/img/dark3.png?raw=true) |
 
 ## Usage
 
