@@ -231,12 +231,14 @@ Blocky:
       ha-card.type-tile {
         padding: 7px;
       }
+      ha-card.type-button,
       ha-card.type-picture,
       ha-card.type-picture-entity,
       ha-card.type-picture-glance,
       ha-card.type-picture-elements {
         padding: 0.5rem;
       }
+      ha-card.type-button ha-ripple,
       ha-card.type-picture-entity .footer,
       ha-card.type-picture-glance .box {
         margin: 0.5rem;
