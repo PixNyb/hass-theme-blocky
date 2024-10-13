@@ -16,13 +16,35 @@ Based on the stylesheets I use regularly for my own projects, I've decided to po
 
 ### HACS
 
+<!--
 [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=PixNyb&repository=https%3A%2F%2Fgithub.com%2FPixNyb%2Fhass-theme-blocky&category=themes)
 
 Or, follow these steps:
 
-1. Go to the Community Store.
-2. Search for `Blocky`.
+1. Go to the HACS page.
+2. Look for the `Blocky - By PixNyb` theme in the HACS store.
 3. Install the theme.
+4. Reload home assistant.
+   1. Go to the **Settings** page.
+   2. Click **System**.
+   3. Press the power button in the top right corner.
+   4. Click **Quick reload**.
+-->
+
+1. Go to the HACS page.
+2. Click on the options menu in the top right corner.
+3. Click **Custom repositories**.
+4. Add the following:
+    - **URL**: `https://github.com/PixNyb/hass-theme-blocky`
+    - **Type**: `Theme`
+5. Click **Add**.
+6. Look for the `Blocky - By PixNyb` theme in the HACS store.
+7. Install the theme.
+8. Reload home assistant.
+   1. Go to the **Settings** page.
+   2. Click **System**.
+   3. Press the power button in the top right corner.
+   4. Click **Quick reload**.
 
 ### Manual
 
