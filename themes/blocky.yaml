@@ -14,6 +14,17 @@ Blocky: &base
   clr-background-header: "rgba(var(--rgb-background-header), 1)"
   clr-text: "rgb(var(--rgb-text))"
   clr-text-secondary: "rgb(var(--rgb-text-secondary))"
+  clr-text-disabled: "rgb(var(--rgb-text-disabled))"
+
+  background-color: var(--clr-background)
+  background-card-color: var(--clr-background-card)
+  background-header-color: "rgba(var(--clr-background-header), 1)"
+  text-color: var(--clr-text)
+  primary-text-color: var(--clr-text)
+  text-secondary-color: var(--clr-text-secondary)
+  secondary-text-color: var(--clr-text-secondary)
+  text-disabled-color: var(--clr-text-disabled)
+  disabled-text-color: var(--clr-text-disabled)
 
   # Blocky Theme colors
   clr-white: "rgb(var(--rgb-white))"
@@ -116,12 +127,6 @@ Blocky: &base
   grey-color: var(--clr-gray)
   dark-gray-color: var(--clr-dark-gray)
   dark-grey-color: var(--clr-dark-gray)
-  background-color: var(--clr-background)
-  background-card-color: var(--clr-background-card)
-  background-header-color: "rgba(var(--clr-background-header), 1)"
-  text-color: var(--clr-text)
-  text-secondary-color: var(--clr-text-secondary)
-  link-color: var(--clr-link)
   red-color: var(--clr-red)
   pink-color: var(--clr-pink)
   orange-color: var(--clr-orange)
@@ -562,6 +567,7 @@ Blocky: &base
       rgb-background-header: var(--rgb-background)
       rgb-text: var(--rgb-black)
       rgb-text-secondary: var(--rgb-dark-gray)
+      rgb-text-disabled: var(--rgb-light-gray)
       rgb-light-grey: var(--rgb-light-gray)
       rgb-grey: var(--rgb-gray)
       rgb-dark-grey: var(--rgb-dark-gray)
@@ -663,6 +669,7 @@ Blocky: &base
       rgb-background-header: var(--rgb-background)
       rgb-text: var(--rgb-white)
       rgb-text-secondary: var(--rgb-light-gray)
+      rgb-text-disabled: var(--rgb-light-gray)
       rgb-light-grey: var(--rgb-light-gray)
       rgb-grey: var(--rgb-gray)
       rgb-dark-grey: var(--rgb-dark-gray)
