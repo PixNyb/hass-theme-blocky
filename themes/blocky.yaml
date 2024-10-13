@@ -243,6 +243,10 @@ Blocky:
       ha-card.type-picture-glance .box {
         margin: 0.5rem;
       }
+      ha-card.type-glance .entity:focus {
+        border-radius: 0 !important;
+        background: var(--clr-background);
+      }
     ha-full-calendar:
       $:
         ha-button-toggle-group:
