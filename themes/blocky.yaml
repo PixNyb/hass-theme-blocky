@@ -258,6 +258,15 @@ Blocky: &base
       ha-card.type-custom-mini-media-player.--has-artwork {
         border: var(--border-width) solid var(--clr-background-card);
       }
+      ha-card.type-custom-mini-media-player.--has-artwork .mmp-player {
+        margin-top: calc(var(--border-width) * -1);
+        margin-left: calc(var(--border-width) * -1);
+        margin-right: calc(var(--border-width) * -1);
+        width: calc(100% + var(--border-width) * 2);
+      }
+      ha-card.type-custom-mini-media-player.--has-artwork .mmp__container {
+        width: 100%;
+      }
       ha-card.type-custom-mini-media-player.--has-artwork .cover {
         opacity: 0.7;
       }
