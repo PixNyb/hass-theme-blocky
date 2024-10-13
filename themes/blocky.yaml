@@ -149,7 +149,7 @@ Blocky:
   code-editor-background-color: var(--clr-background-card)
 
   # Checkboxes
-  mdc-checkbox-unchecked-color: var(--clr-gray)
+  mdc-checkbox-unchecked-color: var(--clr-gray-dark)
   mdc-checkbox-disable-color: var(--disabled-text-color)
 
   # Input
@@ -174,8 +174,14 @@ Blocky:
   mdc-text-field-hover-line-color: var(--input-hover-line-color)
 
   feature-border-radius: 0
+  feature-height: 60px
+  feature-button-spacing: 0.5rem
   md-dialog-container-shape: 0
+  md-sys-shape-corner-full: 0
   control-switch-border-radius: 0
+  control-select-border-radius: 0
+  control-select-button-border-radius: 0
+  control-select-background: var(--clr-background)
 
   mini-media-player-button-color: rgba(var(--rgb-background), .6)
 
@@ -185,12 +191,6 @@ Blocky:
 
   # Card-Mod
   card-mod-theme: "Blocky"
-
-  card-mod-root-yaml: |
-    $ha-card: |
-      :host {
-        background: red;
-      }
 
   card-mod-sidebar-yaml: |
     .: |
@@ -225,8 +225,21 @@ Blocky:
 
   card-mod-card-yaml: |
     .: |
+      ha-card {
+        transition: none;
+      }
       ha-card.type-tile {
         padding: 7px;
+      }
+      ha-card.type-picture,
+      ha-card.type-picture-entity,
+      ha-card.type-picture-glance,
+      ha-card.type-picture-elements {
+        padding: 0.5rem;
+      }
+      ha-card.type-picture-entity .footer,
+      ha-card.type-picture-glance .box {
+        margin: 0.5rem;
       }
     ha-full-calendar:
       $:
@@ -257,6 +270,29 @@ Blocky:
               }
             "*:first-child":
               $:
+                ha-control-button:
+                  $: |
+                    .button {
+                      border-radius: 0 !important;
+                      background: var(--clr-background) !important;
+                      border: 0.5rem solid var(--clr-background) !important;
+                    }
+                    .button::before {
+                      display: none;
+                    }
+                    .button[disabled] {
+                      background: var(--clr-background-card) !important;
+                    }
+                ha-control-number-buttons:
+                  $: |
+                    .value {
+                      border-radius: 0 !important;
+                      background: var(--clr-background) !important;
+                      border: 0.5rem solid var(--clr-background);
+                    }
+                    .value::before {
+                      display: none;
+                    }
                 ha-control-slider:
                   $: |
                     .slider-track-bar {
@@ -265,6 +301,92 @@ Blocky:
                     .slider-track-bar::after {
                       border-radius: 0 !important;
                     }
+                    .slider-track-cursor {
+                      border-radius: 0 !important;
+                      background: var(--clr-background-card) !important;
+                    }
+                    .slider-track-cursor::after {
+                      border-radius: 0 !important;
+                    }
+                ha-control-select:
+                  .: |
+                    :host {
+                      border-radius: 0 !important;
+                      height: unset !important;
+                    }
+                  $: |
+                    .container {
+                      --feature-button-spacing: 0.5rem !important;
+                      display: flex !important;
+                      gap: var(--feature-button-spacing);
+                    }
+                    .container::before {
+                      display: none;
+                    }
+                    .option {
+                      border: 0.5rem solid var(--clr-background);
+                      height: unset !important;
+                    }
+                    .option:not(.selected) {
+                      background: var(--clr-background);
+                    }
+                ha-control-select-menu:
+                  $: |
+                    .select-anchor {
+                      background: var(--clr-background) !important;
+                      border: 0.5rem solid var(--clr-background);
+                    }
+                    .select-anchor::before {
+                      display: none;
+                    }
+    ha-state-control-humidifier-humidity:
+      $:
+        .: |
+          :host {
+            margin-bottom: -22px;
+          }
+          .buttons {
+            gap: var(--feature-button-spacing) !important;
+          }
+        ha-outlined-icon-button:
+          $: |
+            #button {
+              background: var(--clr-background);
+              border-radius: 0 !important;
+            }
+            #button.outlined {
+              --md-ripple-hover-color: var(--_outline-color);
+            }
+            #button.outlined::before {
+              display: none;
+            }
+            md-ripple {
+              margin: 0.5rem;
+            }
+    ha-state-control-climate-temperature:
+      $:
+        .: |
+          :host {
+            margin-bottom: -22px;
+          }
+          .buttons {
+            gap: var(--feature-button-spacing) !important;
+          }
+        ha-outlined-icon-button:
+          $: |
+            #button {
+              background: var(--clr-background);
+              border-radius: 0 !important;
+            }
+            #button.outlined {
+              --md-ripple-hover-color: var(--_outline-color);
+            }
+            #button.outlined::before {
+              display: none;
+            }
+            md-ripple {
+              margin: 0.5rem;
+            }
     mmp-shortcuts:
       $:
         .mmp-shortcuts__buttons:
