@@ -1,6 +1,8 @@
 #!/bin/bash
 
-echo -e "alias reload='kill \$(pgrep hass) || true && hass > ~/.homeassistant/hass.log 2>&1 &'" >> ~/.bashrc
+echo -e "alias start='hass > ~/.homeassistant/hass.log 2>&1 &'" >> ~/.bashrc
+echo -e "alias restart='kill \$(pgrep hass) || true && hass > ~/.homeassistant/hass.log 2>&1 &'" >> ~/.bashrc
+echo -e "alias stop='kill \$(pgrep hass) || true'" >> ~/.bashrc
 
 # Install Home Assistant Core dependencies
 sudo apt-get update && sudo apt-get upgrade -y

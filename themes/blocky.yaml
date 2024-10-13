@@ -4,7 +4,11 @@
 # Description: A clean and modern theme for Home Assistant based on the styling used on https://roelc.me
 # ---
 
-Blocky:
+Blocky: &base
+  gap-width: 16px
+  spacing: calc(var(--gap-width) / 2)
+  border-width: calc(var(--gap-width) / 2)
+
   # Blocky Theme colors
   clr-white: "rgb(var(--rgb-white))"
   clr-black: "rgb(var(--rgb-black))"
@@ -16,13 +20,15 @@ Blocky:
   clr-text: "rgb(var(--rgb-text))"
   clr-text-secondary: "rgb(var(--rgb-text-secondary))"
   clr-link: "rgb(var(--rgb-link))"
-  clr-green: "rgb(var(--rgb-green))"
   clr-red: "rgb(var(--rgb-red))"
+  clr-pink: "rgb(var(--rgb-pink))"
+  clr-orange: "rgb(var(--rgb-orange))"
   clr-yellow: "rgb(var(--rgb-yellow))"
   clr-blue: "rgb(var(--rgb-blue))"
   clr-teal: "rgb(var(--rgb-teal))"
+  clr-green: "rgb(var(--rgb-green))"
+  clr-brown: "rgb(var(--rgb-brown))"
   clr-purple: "rgb(var(--rgb-purple))"
-  clr-orange: "rgb(var(--rgb-orange))"
 
   clr-primary: var(--clr-blue)
   rgb-primary: var(--rgb-blue)
@@ -45,6 +51,7 @@ Blocky:
   rgb-success-color: var(--rgb-green)
   info-color: var(--clr-blue)
   rgb-info-color: var(--rgb-blue)
+  primary-color: var(--clr-primary)
   rgb-primary-color: var(--rgb-primary)
   accent-color: var(--clr-secondary)
   rgb-accent-color: var(--rgb-secondary)
@@ -87,6 +94,7 @@ Blocky:
   paper-item-icon-active-color: var(--primary-color)
   mdc-button-outline-color: var(--primary-color)
   mdc-button-outline-width: 1px
+  mdc-button-disabled-ink-color: var(--disabled-text-color)
 
   # States and Badges
   state-icon-color: var(--paper-item-icon-color)
@@ -175,7 +183,7 @@ Blocky:
 
   feature-border-radius: 0
   feature-height: 60px
-  feature-button-spacing: 0.5rem
+  feature-button-spacing: var(--spacing)
   md-dialog-container-shape: 0
   md-sys-shape-corner-full: 0
   control-switch-border-radius: 0
@@ -185,9 +193,9 @@ Blocky:
 
   mini-media-player-button-color: rgba(var(--rgb-background), .6)
 
-  stack-card-gap: 1rem
-  grid-card-gap: 1rem
-  masonry-view-card-margin: 0.5rem 0.5rem 1rem
+  stack-card-gap: var(--gap-width)
+  grid-card-gap: var(--gap-width)
+  masonry-view-card-margin: calc(var(--gap-width) / 2) calc(var(--gap-width) / 2) var(--gap-width) calc(var(--gap-width) / 2)
 
   # Card-Mod
   card-mod-theme: "Blocky"
@@ -211,7 +219,7 @@ Blocky:
             margin-bottom: 4px !important;
           }
           div.edit-mode hui-card-options:hover {
-            outline: 0.5rem solid var(--clr-dark-gray);
+            outline: var(--border-width) solid var(--clr-dark-gray);
           }
         hui-view-badges:
           $:
@@ -236,12 +244,12 @@ Blocky:
       ha-card.type-picture-entity,
       ha-card.type-picture-glance,
       ha-card.type-picture-elements {
-        padding: 0.5rem;
+        padding: var(--border-width);
       }
       ha-card.type-button ha-ripple,
       ha-card.type-picture-entity .footer,
       ha-card.type-picture-glance .box {
-        margin: 0.5rem;
+        margin: var(--border-width);
       }
       ha-card.type-glance .entity:focus {
         border-radius: 0 !important;
@@ -281,7 +289,7 @@ Blocky:
                     .button {
                       border-radius: 0 !important;
                       background: var(--clr-background) !important;
-                      border: 0.5rem solid var(--clr-background) !important;
+                      border: var(--border-width) solid var(--clr-background) !important;
                     }
                     .button::before {
                       display: none;
@@ -294,7 +302,7 @@ Blocky:
                     .value {
                       border-radius: 0 !important;
                       background: var(--clr-background) !important;
-                      border: 0.5rem solid var(--clr-background);
+                      border: var(--border-width) solid var(--clr-background);
                     }
                     .value::before {
                       display: none;
@@ -322,7 +330,7 @@ Blocky:
                     }
                   $: |
                     .container {
-                      --feature-button-spacing: 0.5rem !important;
+                      --feature-button-spacing: var(--spacing) !important;
                       display: flex !important;
                       gap: var(--feature-button-spacing);
                     }
@@ -330,7 +338,7 @@ Blocky:
                       display: none;
                     }
                     .option {
-                      border: 0.5rem solid var(--clr-background);
+                      border: var(--border-width) solid var(--clr-background);
                       height: unset !important;
                     }
                     .option:not(.selected) {
@@ -340,7 +348,7 @@ Blocky:
                   $: |
                     .select-anchor {
                       background: var(--clr-background) !important;
-                      border: 0.5rem solid var(--clr-background);
+                      border: var(--border-width) solid var(--clr-background);
                     }
                     .select-anchor::before {
                       display: none;
@@ -364,7 +372,7 @@ Blocky:
               display: none;
             }
             md-ripple {
-              margin: 0.5rem;
+              margin: var(--border-width);
             }
     ha-state-control-climate-temperature:
       $:
@@ -385,7 +393,7 @@ Blocky:
               display: none;
             }
             md-ripple {
-              margin: 0.5rem;
+              margin: var(--border-width);
             }
     mmp-shortcuts:
       $:
@@ -402,7 +410,7 @@ Blocky:
             }
 
   modes:
-    light:
+    light: &light
       rgb-white: "255, 255, 255"
       rgb-black: "0, 0, 0"
       rgb-gray: "248, 248, 248"
@@ -413,17 +421,19 @@ Blocky:
       rgb-text: var(--rgb-black)
       rgb-text-secondary: var(--rgb-dark-gray)
       rgb-link: "107, 107, 107"
-      rgb-green: "34, 139, 34"
       rgb-red: "178, 34, 34"
+      rgb-pink: "255, 105, 180"
+      rgb-orange: "255, 165, 0"
       rgb-yellow: "218, 165, 32"
       rgb-blue: "30, 144, 255"
       rgb-teal: "0, 128, 128"
+      rgb-green: "34, 139, 34"
+      rgb-brown: "139, 69, 19"
       rgb-purple: "128, 0, 128"
-      rgb-orange: "255, 140, 0"
       app-header-background-color: "#FFFFFF" #The RGB value of rgb-background as variables aren't supported in this field
       primary-color: "#1E90FF" #The RGB value of rgb-blue as variables aren't supported in this field
 
-    dark:
+    dark: &dark
       rgb-white: "208, 208, 208"
       rgb-black: "29, 29, 29"
       rgb-gray: "39, 39, 39"
@@ -434,12 +444,94 @@ Blocky:
       rgb-text: var(--rgb-white)
       rgb-text-secondary: "140, 140, 140"
       rgb-link: "161, 161, 161"
-      rgb-green: "50, 205, 50"
       rgb-red: "255, 99, 71"
+      rgb-pink: "255, 192, 203"
+      rgb-orange: "255, 140, 0"
       rgb-yellow: "255, 215, 0"
       rgb-blue: "30, 144, 255"
       rgb-teal: "32, 178, 170"
+      rgb-green: "50, 205, 50"
+      rgb-brown: "139, 69, 19"
       rgb-purple: "147, 112, 219"
-      rgb-orange: "255, 140, 0"
       app-header-background-color: "#1D1D1D" #The RGB value of rgb-background as variables aren't supported in this field
       primary-color: "#1E90FF" #The RGB value of rgb-blue as variables aren't supported in this field
+
+Blocky Red:
+  <<: *base
+
+  clr-primary: var(--clr-red)
+  rgb-primary: var(--rgb-red)
+  clr-secondary: var(--clr-pink)
+  rgb-secondary: var(--rgb-pink)
+  clr-tertiary: var(--clr-orange)
+  rgb-tertiary: var(--rgb-orange)
+  clr-quaternary: var(--clr-yellow)
+  rgb-quaternary: var(--rgb-yellow)
+
+  modes:
+    light:
+      <<: *light
+      primary-color: "#B22222" #The RGB value of rgb-red as variables aren't supported in this field
+    dark:
+      <<: *dark
+      primary-color: "#FF6347" #The RGB value of rgb-red as variables aren't supported in this field
+
+Blocky Green:
+  <<: *base
+
+  clr-primary: var(--clr-green)
+  rgb-primary: var(--rgb-green)
+  clr-secondary: var(--clr-teal)
+  rgb-secondary: var(--rgb-teal)
+  clr-tertiary: var(--clr-blue)
+  rgb-tertiary: var(--rgb-blue)
+  clr-quaternary: var(--clr-brown)
+  rgb-quaternary: var(--rgb-brown)
+
+  modes:
+    light:
+      <<: *light
+      primary-color: "#228B22" #The RGB value of rgb-green as variables aren't supported in this field
+    dark:
+      <<: *dark
+      primary-color: "#32CD32" #The RGB value of rgb-green as variables aren't supported in this field
+
+Blocky Purple:
+  <<: *base
+
+  clr-primary: var(--clr-purple)
+  rgb-primary: var(--rgb-purple)
+  clr-secondary: var(--clr-red)
+  rgb-secondary: var(--rgb-red)
+  clr-tertiary: var(--clr-pink)
+  rgb-tertiary: var(--rgb-pink)
+  clr-quaternary: var(--clr-blue)
+  rgb-quaternary: var(--rgb-blue)
+
+  modes:
+    light:
+      <<: *light
+      primary-color: "#800080" #The RGB value of rgb-purple as variables aren't supported in this field
+    dark:
+      <<: *dark
+      primary-color: "#9370DB" #The RGB value of rgb-purple as variables aren't supported in this field
+
+Blocky Yellow:
+  <<: *base
+
+  clr-primary: var(--clr-yellow)
+  rgb-primary: var(--rgb-yellow)
+  clr-secondary: var(--clr-orange)
+  rgb-secondary: var(--rgb-orange)
+  clr-tertiary: var(--clr-red)
+  rgb-tertiary: var(--rgb-red)
+  clr-quaternary: var(--clr-pink)
+  rgb-quaternary: var(--rgb-pink)
+
+  modes:
+    light:
+      <<: *light
+      primary-color: "#DAA520" #The RGB value of rgb-yellow as variables aren't supported in this field
+    dark:
+      <<: *dark
+      primary-color: "#FFD700" #The RGB value of rgb-yellow as variables aren't supported in this field
