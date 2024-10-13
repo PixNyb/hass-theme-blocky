@@ -192,6 +192,12 @@ Blocky: &base
   control-select-background: var(--clr-background)
 
   mini-media-player-button-color: rgba(var(--rgb-background), .6)
+  mini-media-player-overlay-color: rgba(var(--rgb-background-card), .8)
+  mini-media-player-overlay-base-color: var(--clr-text)
+  mini-media-player-overlay-accent-color: var(--clr-primary)
+  mini-media-player-overlay-info-color: var(--clr-secondary)
+  mini-media-player-overlay-color-stop: 75%
+  mini-media-player-progress-height: var(--border-width)
 
   stack-card-gap: var(--gap-width)
   grid-card-gap: var(--gap-width)
@@ -258,20 +264,14 @@ Blocky: &base
         border-radius: 0 !important;
         background: var(--clr-background);
       }
-      ha-card.type-custom-mini-media-player.--has-artwork {
+      ha-card.type-custom-mini-media-player {
         border: var(--border-width) solid var(--clr-background-card);
       }
-      ha-card.type-custom-mini-media-player.--has-artwork .mmp-player {
-        margin-top: calc(var(--border-width) * -1);
-        margin-left: calc(var(--border-width) * -1);
-        margin-right: calc(var(--border-width) * -1);
-        width: calc(100% + var(--border-width) * 2);
+      ha-card.type-custom-mini-media-player .mmp-player {
+        padding: 16px calc(16px - var(--border-width)) calc(16px - var(--border-width)) calc(16px - var(--border-width));
       }
-      ha-card.type-custom-mini-media-player.--has-artwork .mmp__container {
-        width: 100%;
-      }
-      ha-card.type-custom-mini-media-player.--has-artwork .cover {
-        opacity: 0.7;
+      ha-card.type-custom-mini-media-player[artwork*="full-cover"].--has-artwork .mmp-player {
+        background: linear-gradient(to top, rgba(var(--rgb-background-card), 1) calc(var(--border-width) * 1.5), rgba(var(--rgb-background-card), .8) 50%, rgba(var(--rgb-background-card), .4) 80%, rgba(var(--rgb-background-card), 0) 100%) !important;
       }
     ha-full-calendar:
       $:
