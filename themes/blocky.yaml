@@ -268,7 +268,7 @@ Blocky: &base
         border: var(--border-width) solid var(--clr-background-card);
       }
       ha-card.type-custom-mini-media-player .mmp-player {
-        padding: 16px calc(16px - var(--border-width)) calc(16px - var(--border-width)) calc(16px - var(--border-width));
+        padding: 16px calc(16px - var(--border-width)) calc(16px - var(--border-width)) calc(16px - var(--border-width)) !important;
       }
       ha-card.type-custom-mini-media-player[artwork*="full-cover"].--has-artwork .mmp-player {
         background: linear-gradient(to top, rgba(var(--rgb-background-card), 1) calc(var(--border-width) * 1.5), rgba(var(--rgb-background-card), .8) 50%, rgba(var(--rgb-background-card), .4) 80%, rgba(var(--rgb-background-card), 0) 100%) !important;
