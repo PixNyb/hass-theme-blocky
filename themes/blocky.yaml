@@ -239,6 +239,9 @@ Blocky: &base
       ha-card.type-tile {
         padding: 7px;
       }
+      ha-card.type-tile ha-ripple {
+        inset: var(--border-width);
+      }
       ha-card.type-button,
       ha-card.type-picture,
       ha-card.type-picture-entity,
