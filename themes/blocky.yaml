@@ -255,6 +255,12 @@ Blocky: &base
         border-radius: 0 !important;
         background: var(--clr-background);
       }
+      ha-card.type-custom-mini-media-player.--has-artwork {
+        border: var(--border-width) solid var(--clr-background-card);
+      }
+      ha-card.type-custom-mini-media-player.--has-artwork .cover {
+        opacity: 0.7;
+      }
     ha-full-calendar:
       $:
         ha-button-toggle-group:
@@ -404,6 +410,8 @@ Blocky: &base
               border-radius: 0;
               box-shadow: none;
               transition: background .3s;
+              background: var(--clr-background);
+              border: var(--border-width) solid var(--clr-background);
             }
             .mmp-shortcuts__button:hover {
               background: var(--clr-background-card);
