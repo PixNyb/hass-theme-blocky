@@ -9,50 +9,159 @@ Blocky: &base
   spacing: calc(var(--gap-width) / 2)
   border-width: calc(var(--gap-width) / 2)
 
-  # Blocky Theme colors
-  clr-white: "rgb(var(--rgb-white))"
-  clr-black: "rgb(var(--rgb-black))"
-  clr-gray: "rgb(var(--rgb-gray))"
-  clr-dark-gray: "rgb(var(--rgb-dark-gray))"
   clr-background: "rgb(var(--rgb-background))"
   clr-background-card: "rgb(var(--rgb-background-card))"
   clr-background-header: "rgba(var(--rgb-background-header), 1)"
   clr-text: "rgb(var(--rgb-text))"
   clr-text-secondary: "rgb(var(--rgb-text-secondary))"
-  clr-link: "rgb(var(--rgb-link))"
+
+  # Blocky Theme colors
+  clr-white: "rgb(var(--rgb-white))"
+  clr-white-darker: "rgb(var(--rgb-white-darker))"
+  clr-white-lighter: "rgb(var(--rgb-white-lighter))"
+
+  clr-black: "rgb(var(--rgb-black))"
+  clr-black-darker: "rgb(var(--rgb-black-darker))"
+  clr-black-lighter: "rgb(var(--rgb-black-lighter))"
+
+  clr-light-gray: "rgb(var(--rgb-light-gray))"
+  clr-light-gray-darker: "rgb(var(--rgb-light-gray-darker))"
+  clr-light-gray-lighter: "rgb(var(--rgb-light-gray-lighter))"
+
+  clr-gray: "rgb(var(--rgb-gray))"
+  clr-gray-darker: "rgb(var(--rgb-gray-darker))"
+  clr-gray-lighter: "rgb(var(--rgb-gray-lighter))"
+
+  clr-dark-gray: "rgb(var(--rgb-dark-gray))"
+  clr-dark-gray-darker: "rgb(var(--rgb-dark-gray-darker))"
+  clr-dark-gray-lighter: "rgb(var(--rgb-dark-gray-lighter))"
+
   clr-red: "rgb(var(--rgb-red))"
+  clr-red-darker: "rgb(var(--rgb-red-darker))"
+  clr-red-lighter: "rgb(var(--rgb-red-lighter))"
+
   clr-pink: "rgb(var(--rgb-pink))"
+  clr-pink-darker: "rgb(var(--rgb-pink-darker))"
+  clr-pink-lighter: "rgb(var(--rgb-pink-lighter))"
+
   clr-orange: "rgb(var(--rgb-orange))"
+  clr-orange-darker: "rgb(var(--rgb-orange-darker))"
+  clr-orange-lighter: "rgb(var(--rgb-orange-lighter))"
+
   clr-yellow: "rgb(var(--rgb-yellow))"
+  clr-yellow-darker: "rgb(var(--rgb-yellow-darker))"
+  clr-yellow-lighter: "rgb(var(--rgb-yellow-lighter))"
+
   clr-blue: "rgb(var(--rgb-blue))"
+  clr-blue-darker: "rgb(var(--rgb-blue-darker))"
+  clr-blue-lighter: "rgb(var(--rgb-blue-lighter))"
+
   clr-teal: "rgb(var(--rgb-teal))"
+  clr-teal-darker: "rgb(var(--rgb-teal-darker))"
+  clr-teal-lighter: "rgb(var(--rgb-teal-lighter))"
+
   clr-green: "rgb(var(--rgb-green))"
+  clr-green-darker: "rgb(var(--rgb-green-darker))"
+  clr-green-lighter: "rgb(var(--rgb-green-lighter))"
+
   clr-brown: "rgb(var(--rgb-brown))"
+  clr-brown-darker: "rgb(var(--rgb-brown-darker))"
+  clr-brown-lighter: "rgb(var(--rgb-brown-lighter))"
+
   clr-purple: "rgb(var(--rgb-purple))"
+  clr-purple-darker: "rgb(var(--rgb-purple-darker))"
+  clr-purple-lighter: "rgb(var(--rgb-purple-lighter))"
+
+  clr-deep-purple: "rgb(var(--rgb-deep-purple))"
+  clr-deep-purple-darker: "rgb(var(--rgb-deep-purple-darker))"
+  clr-deep-purple-lighter: "rgb(var(--rgb-deep-purple-lighter))"
+
+  clr-indigo: "rgb(var(--rgb-indigo))"
+  clr-indigo-darker: "rgb(var(--rgb-indigo-darker))"
+  clr-indigo-lighter: "rgb(var(--rgb-indigo-lighter))"
+
+  clr-light-blue: "rgb(var(--rgb-light-blue))"
+  clr-light-blue-darker: "rgb(var(--rgb-light-blue-darker))"
+  clr-light-blue-lighter: "rgb(var(--rgb-light-blue-lighter))"
+
+  clr-cyan: "rgb(var(--rgb-cyan))"
+  clr-cyan-darker: "rgb(var(--rgb-cyan-darker))"
+  clr-cyan-lighter: "rgb(var(--rgb-cyan-lighter))"
+
+  clr-light-green: "rgb(var(--rgb-light-green))"
+  clr-light-green-darker: "rgb(var(--rgb-light-green-darker))"
+  clr-light-green-lighter: "rgb(var(--rgb-light-green-lighter))"
+
+  clr-lime: "rgb(var(--rgb-lime))"
+  clr-lime-darker: "rgb(var(--rgb-lime-darker))"
+  clr-lime-lighter: "rgb(var(--rgb-lime-lighter))"
+
+  clr-amber: "rgb(var(--rgb-amber))"
+  clr-amber-darker: "rgb(var(--rgb-amber-darker))"
+  clr-amber-lighter: "rgb(var(--rgb-amber-lighter))"
+
+  clr-deep-orange: "rgb(var(--rgb-deep-orange))"
+  clr-deep-orange-darker: "rgb(var(--rgb-deep-orange-darker))"
+  clr-deep-orange-lighter: "rgb(var(--rgb-deep-orange-lighter))"
+
+  clr-blue-grey: "rgb(var(--rgb-blue-grey))"
+  clr-blue-grey-darker: "rgb(var(--rgb-blue-grey-darker))"
+  clr-blue-grey-lighter: "rgb(var(--rgb-blue-grey-lighter))"
+
+  white-color: var(--clr-white)
+  black-color: var(--clr-black)
+  light-gray-color: var(--clr-light-gray)
+  light-grey-color: var(--clr-light-gray)
+  gray-color: var(--clr-gray)
+  grey-color: var(--clr-gray)
+  dark-gray-color: var(--clr-dark-gray)
+  dark-grey-color: var(--clr-dark-gray)
+  background-color: var(--clr-background)
+  background-card-color: var(--clr-background-card)
+  background-header-color: "rgba(var(--clr-background-header), 1)"
+  text-color: var(--clr-text)
+  text-secondary-color: var(--clr-text-secondary)
+  link-color: var(--clr-link)
+  red-color: var(--clr-red)
+  pink-color: var(--clr-pink)
+  orange-color: var(--clr-orange)
+  yellow-color: var(--clr-yellow)
+  blue-color: var(--clr-blue)
+  teal-color: var(--clr-teal)
+  green-color: var(--clr-green)
+  brown-color: var(--clr-brown)
+  purple-color: var(--clr-purple)
+  deep-purple-color: var(--clr-deep-purple)
+  indigo-color: var(--clr-indigo)
+  light-blue-color: var(--clr-light-blue)
+  cyan-color: var(--clr-cyan)
+  light-green-color: var(--clr-light-green)
+  lime-color: var(--clr-lime)
+  amber-color: var(--clr-amber)
+  deep-orange-color: var(--clr-deep-orange)
+  blue-grey-color: var(--clr-blue-grey)
 
   clr-primary: var(--clr-blue)
   rgb-primary: var(--rgb-blue)
-  clr-secondary: var(--clr-teal)
-  rgb-secondary: var(--rgb-teal)
-  clr-tertiary: var(--clr-green)
-  rgb-tertiary: var(--rgb-green)
-  clr-quaternary: var(--clr-purple)
-  rgb-quaternary: var(--rgb-purple)
+  clr-primary-dark: var(--clr-blue-darker)
+  rgb-primary-dark: var(--rgb-blue-darker)
+  clr-primary-light: var(--clr-blue-lighter)
+  rgb-primary-light: var(--rgb-blue-lighter)
+  clr-secondary: var(--clr-light-blue)
+  rgb-secondary: var(--rgb-light-blue)
+  clr-tertiary: var(--clr-teal)
+  rgb-tertiary: var(--rgb-teal)
+  clr-quaternary: var(--clr-cyan)
+  rgb-quaternary: var(--rgb-cyan)
 
   # Main Interface Colors
   divider-color: var(--clr-background)
-  disabled-color: var(--clr-dark-gray)
-  rgb-disabled-color: var(--rgb-dark-gray)
-  error-color: var(--clr-red)
-  rgb-error-color: var(--rgb-red)
-  warning-color: var(--clr-yellow)
-  rgb-warning-color: var(--rgb-yellow)
-  success-color: var(--clr-green)
-  rgb-success-color: var(--rgb-green)
-  info-color: var(--clr-blue)
-  rgb-info-color: var(--rgb-blue)
   primary-color: var(--clr-primary)
   rgb-primary-color: var(--rgb-primary)
+  dark-primary-color: var(--clr-primary-dark)
+  rgb-dark-primary-color: var(--rgb-primary-dark)
+  light-primary-color: var(--clr-primary-light)
+  rgb-light-primary-color: var(--rgb-primary-light)
   accent-color: var(--clr-secondary)
   rgb-accent-color: var(--rgb-secondary)
   accent-color-2: var(--clr-tertiary)
@@ -60,11 +169,17 @@ Blocky: &base
   accent-color-3: var(--clr-quaternary)
   rgb-accent-color-3: var(--rgb-quaternary)
 
+  error-color: var(--clr-red)
+  warning-color: var(--clr-orange)
+  success-color: var(--clr-green)
+  info-color: var(--clr-blue)
+
   # Text Colors
   text-primary-color: var(--clr-text)
-  primary-text-color: var(--clr-text)
-  text-secondary-color: var(--clr-text-secondary)
+  primary-text-color: var(--text-primary-color)
   secondary-text-color: var(--clr-text-secondary)
+  light-primary-text-color: var(--clr-text-secondary)
+  text-light-primary-color: var(--light-primary-text-color)
   text-disabled-color: var(--clr-text-disabled)
   disabled-text-color: var(--clr-text-disabled)
   accent-text-color: var(--clr-gray)
@@ -115,7 +230,17 @@ Blocky: &base
   label-badge-green: var(--clr-green)
   label-badge-blue: var(--primary-color)
   label-badge-yellow: var(--clr-yellow)
-  label-badge-gray: var(--clr-gray)
+  label-badge-grey: var(--clr-gray)
+
+  # Energy
+  energy-grid-consumption-color: var(--clr-indigo)
+  energy-grid-return-color: var(--clr-green)
+  energy-solar-color: var(--clr-yellow)
+  energy-non-fossil-color: var(--clr-green)
+  energy-battery-out-color: var(--clr-red)
+  energy-battery-in-color: var(--clr-green)
+  energy-gas-color: var(--clr-orange)
+  energy-water-color: var(--clr-blue)
 
   # Cards
   card-background-color: var(--clr-background-card)
@@ -432,48 +557,204 @@ Blocky: &base
 
   modes:
     light: &light
-      rgb-white: "255, 255, 255"
-      rgb-black: "0, 0, 0"
-      rgb-gray: "248, 248, 248"
-      rgb-dark-gray: "95, 99, 104"
       rgb-background: var(--rgb-white)
       rgb-background-card: var(--rgb-gray)
       rgb-background-header: var(--rgb-background)
       rgb-text: var(--rgb-black)
       rgb-text-secondary: var(--rgb-dark-gray)
-      rgb-link: "107, 107, 107"
+      rgb-light-grey: var(--rgb-light-gray)
+      rgb-grey: var(--rgb-gray)
+      rgb-dark-grey: var(--rgb-dark-gray)
+
+      rgb-white: "255, 255, 255"
+      rgb-white-darker: "179, 179, 179"
+      rgb-white-lighter: "255, 255, 255"
+
+      rgb-black: "0, 0, 0"
+      rgb-black-darker: "0, 0, 0"
+      rgb-black-lighter: "51, 51, 51"
+
+      rgb-gray: "248, 248, 248"
+      rgb-gray-darker: "173, 173, 173"
+      rgb-gray-lighter: "255, 255, 255"
+
+      rgb-dark-gray: "95, 99, 104"
+      rgb-dark-gray-darker: "66, 69, 73"
+      rgb-dark-gray-lighter: "114, 119, 125"
+
       rgb-red: "178, 34, 34"
+      rgb-red-darker: "124, 24, 24"
+      rgb-red-lighter: "213, 68, 68"
+
       rgb-pink: "255, 105, 180"
+      rgb-pink-darker: "179, 73, 126"
+      rgb-pink-lighter: "255, 147, 216"
+
       rgb-orange: "255, 165, 0"
+      rgb-orange-darker: "179, 115, 0"
+      rgb-orange-lighter: "255, 198, 51"
+
       rgb-yellow: "218, 165, 32"
+      rgb-yellow-darker: "153, 115, 22"
+      rgb-yellow-lighter: "255, 198, 77"
+
       rgb-blue: "30, 144, 255"
+      rgb-blue-darker: "21, 101, 179"
+      rgb-blue-lighter: "79, 180, 255"
+
       rgb-teal: "0, 128, 128"
+      rgb-teal-darker: "0, 90, 90"
+      rgb-teal-lighter: "51, 153, 153"
+
       rgb-green: "34, 139, 34"
+      rgb-green-darker: "24, 97, 24"
+      rgb-green-lighter: "68, 167, 68"
+
       rgb-brown: "139, 69, 19"
+      rgb-brown-darker: "97, 48, 13"
+      rgb-brown-lighter: "167, 103, 51"
+
       rgb-purple: "128, 0, 128"
+      rgb-purple-darker: "90, 0, 90"
+      rgb-purple-lighter: "153, 51, 153"
+
+      rgb-deep-purple: "75, 0, 130"
+      rgb-deep-purple-darker: "52, 0, 91"
+      rgb-deep-purple-lighter: "102, 51, 153"
+
+      rgb-indigo: "75, 0, 130"
+      rgb-indigo-darker: "52, 0, 91"
+      rgb-indigo-lighter: "102, 51, 153"
+
+      rgb-light-blue: "173, 216, 230"
+      rgb-light-blue-darker: "121, 151, 161"
+      rgb-light-blue-lighter: "207, 232, 242"
+
+      rgb-cyan: "0, 255, 255"
+      rgb-cyan-darker: "0, 179, 179"
+      rgb-cyan-lighter: "51, 255, 255"
+
+      rgb-light-green: "144, 238, 144"
+      rgb-light-green-darker: "101, 167, 101"
+      rgb-light-green-lighter: "173, 255, 173"
+
+      rgb-lime: "50, 205, 50"
+      rgb-lime-darker: "35, 144, 35"
+      rgb-lime-lighter: "101, 255, 101"
+
+      rgb-amber: "255, 191, 0"
+      rgb-amber-darker: "179, 134, 0"
+      rgb-amber-lighter: "255, 217, 51"
+
+      rgb-deep-orange: "255, 69, 0"
+      rgb-deep-orange-darker: "179, 48, 0"
+      rgb-deep-orange-lighter: "255, 111, 51"
+
+      rgb-blue-grey: "119, 136, 153"
+      rgb-blue-grey-darker: "83, 95, 107"
+      rgb-blue-grey-lighter: "143, 163, 183"
+
       app-header-background-color: "#FFFFFF" #The RGB value of rgb-background as variables aren't supported in this field
       primary-color: "#1E90FF" #The RGB value of rgb-blue as variables aren't supported in this field
 
     dark: &dark
-      rgb-white: "208, 208, 208"
-      rgb-black: "29, 29, 29"
-      rgb-gray: "39, 39, 39"
-      rgb-dark-gray: "95, 99, 104"
       rgb-background: var(--rgb-black)
       rgb-background-card: var(--rgb-gray)
       rgb-background-header: var(--rgb-background)
       rgb-text: var(--rgb-white)
-      rgb-text-secondary: "140, 140, 140"
-      rgb-link: "161, 161, 161"
+      rgb-text-secondary: var(--rgb-light-gray)
+      rgb-light-grey: var(--rgb-light-gray)
+      rgb-grey: var(--rgb-gray)
+      rgb-dark-grey: var(--rgb-dark-gray)
+
+      rgb-white: "208, 208, 208"
+      rgb-white-darker: "147, 147, 147"
+      rgb-white-lighter: "255, 255, 255"
+
+      rgb-black: "29, 29, 29"
+      rgb-black-darker: "0, 0, 0"
+      rgb-black-lighter: "51, 51, 51"
+
+      rgb-gray: "39, 39, 39"
+      rgb-gray-darker: "27, 27, 27"
+      rgb-gray-lighter: "47, 47, 47"
+
+      rgb-dark-gray: "95, 99, 104"
+      rgb-dark-gray-darker: "66, 69, 73"
+      rgb-dark-gray-lighter: "114, 119, 125"
+
       rgb-red: "255, 99, 71"
+      rgb-red-darker: "178, 34, 34"
+      rgb-red-lighter: "255, 105, 97"
+
       rgb-pink: "255, 192, 203"
+      rgb-pink-darker: "255, 105, 180"
+      rgb-pink-lighter: "255, 147, 216"
+
       rgb-orange: "255, 140, 0"
+      rgb-orange-darker: "255, 165, 0"
+      rgb-orange-lighter: "255, 198, 51"
+
       rgb-yellow: "255, 215, 0"
+      rgb-yellow-darker: "218, 165, 32"
+      rgb-yellow-lighter: "255, 230, 77"
+
       rgb-blue: "30, 144, 255"
+      rgb-blue-darker: "21, 101, 179"
+      rgb-blue-lighter: "79, 180, 255"
+
       rgb-teal: "32, 178, 170"
+      rgb-teal-darker: "0, 128, 128"
+      rgb-teal-lighter: "51, 204, 204"
+
       rgb-green: "50, 205, 50"
+      rgb-green-darker: "34, 139, 34"
+      rgb-green-lighter: "68, 167, 68"
+
       rgb-brown: "139, 69, 19"
+      rgb-brown-darker: "97, 48, 13"
+      rgb-brown-lighter: "167, 103, 51"
+
       rgb-purple: "147, 112, 219"
+      rgb-purple-darker: "128, 0, 128"
+      rgb-purple-lighter: "153, 51, 153"
+
+      rgb-deep-purple: "138, 43, 226"
+      rgb-deep-purple-darker: "75, 0, 130"
+      rgb-deep-purple-lighter: "102, 51, 153"
+
+      rgb-indigo: "75, 0, 130"
+      rgb-indigo-darker: "52, 0, 91"
+      rgb-indigo-lighter: "102, 51, 153"
+
+      rgb-light-blue: "173, 216, 230"
+      rgb-light-blue-darker: "121, 151, 161"
+      rgb-light-blue-lighter: "207, 232, 242"
+
+      rgb-cyan: "0, 191, 255"
+      rgb-cyan-darker: "0, 135, 179"
+      rgb-cyan-lighter: "51, 204, 255"
+
+      rgb-light-green: "144, 238, 144"
+      rgb-light-green-darker: "101, 167, 101"
+      rgb-light-green-lighter: "173, 255, 173"
+
+      rgb-lime: "50, 205, 50"
+      rgb-lime-darker: "35, 144, 35"
+      rgb-lime-lighter: "101, 255, 101"
+
+      rgb-amber: "255, 191, 0"
+      rgb-amber-darker: "179, 134, 0"
+      rgb-amber-lighter: "255, 217, 51"
+
+      rgb-deep-orange: "255, 69, 0"
+      rgb-deep-orange-darker: "179, 48, 0"
+      rgb-deep-orange-lighter: "255, 111, 51"
+
+      rgb-blue-grey: "176, 196, 222"
+      rgb-blue-grey-darker: "123, 140, 158"
+      rgb-blue-grey-lighter: "191, 210, 230"
+
       app-header-background-color: "#1D1D1D" #The RGB value of rgb-background as variables aren't supported in this field
       primary-color: "#1E90FF" #The RGB value of rgb-blue as variables aren't supported in this field
 
@@ -482,6 +763,10 @@ Blocky Red:
 
   clr-primary: var(--clr-red)
   rgb-primary: var(--rgb-red)
+  clr-primary-dark: var(--clr-red-darker)
+  rgb-primary-dark: var(--rgb-red-darker)
+  clr-primary-light: var(--clr-red-lighter)
+  rgb-primary-light: var(--rgb-red-lighter)
   clr-secondary: var(--clr-pink)
   rgb-secondary: var(--rgb-pink)
   clr-tertiary: var(--clr-orange)
@@ -492,6 +777,8 @@ Blocky Red:
   modes:
     light:
       <<: *light
+      rgb-primary-dark: "124, 24, 24"
+      rgb-primary-light: "213, 68, 68"
       primary-color: "#B22222" #The RGB value of rgb-red as variables aren't supported in this field
     dark:
       <<: *dark
@@ -502,12 +789,16 @@ Blocky Green:
 
   clr-primary: var(--clr-green)
   rgb-primary: var(--rgb-green)
+  clr-primary-dark: var(--clr-green-darker)
+  rgb-primary-dark: var(--rgb-green-darker)
+  clr-primary-light: var(--clr-green-lighter)
+  rgb-primary-light: var(--rgb-green-lighter)
   clr-secondary: var(--clr-teal)
   rgb-secondary: var(--rgb-teal)
-  clr-tertiary: var(--clr-blue)
-  rgb-tertiary: var(--rgb-blue)
-  clr-quaternary: var(--clr-brown)
-  rgb-quaternary: var(--rgb-brown)
+  clr-tertiary: var(--clr-lime)
+  rgb-tertiary: var(--rgb-lime)
+  clr-quaternary: var(--clr-light-green)
+  rgb-quaternary: var(--rgb-light-green)
 
   modes:
     light:
@@ -522,12 +813,16 @@ Blocky Purple:
 
   clr-primary: var(--clr-purple)
   rgb-primary: var(--rgb-purple)
-  clr-secondary: var(--clr-red)
-  rgb-secondary: var(--rgb-red)
-  clr-tertiary: var(--clr-pink)
-  rgb-tertiary: var(--rgb-pink)
-  clr-quaternary: var(--clr-blue)
-  rgb-quaternary: var(--rgb-blue)
+  clr-primary-dark: var(--clr-purple-darker)
+  rgb-primary-dark: var(--rgb-purple-darker)
+  clr-primary-light: var(--clr-purple-lighter)
+  rgb-primary-light: var(--rgb-purple-lighter)
+  clr-secondary: var(--clr-deep-purple)
+  rgb-secondary: var(--rgb-deep-purple)
+  clr-tertiary: var(--clr-indigo)
+  rgb-tertiary: var(--rgb-indigo)
+  clr-quaternary: var(--clr-red)
+  rgb-quaternary: var(--rgb-red)
 
   modes:
     light:
@@ -542,12 +837,16 @@ Blocky Yellow:
 
   clr-primary: var(--clr-yellow)
   rgb-primary: var(--rgb-yellow)
+  clr-primary-dark: var(--clr-yellow-darker)
+  rgb-primary-dark: var(--rgb-yellow-darker)
+  clr-primary-light: var(--clr-yellow-lighter)
+  rgb-primary-light: var(--rgb-yellow-lighter)
   clr-secondary: var(--clr-orange)
   rgb-secondary: var(--rgb-orange)
   clr-tertiary: var(--clr-red)
   rgb-tertiary: var(--rgb-red)
-  clr-quaternary: var(--clr-pink)
-  rgb-quaternary: var(--rgb-pink)
+  clr-quaternary: var(--clr-amber)
+  rgb-quaternary: var(--rgb-amber)
 
   modes:
     light:
@@ -556,3 +855,75 @@ Blocky Yellow:
     dark:
       <<: *dark
       primary-color: "#FFD700" #The RGB value of rgb-yellow as variables aren't supported in this field
+
+Blocky Orange:
+  <<: *base
+
+  clr-primary: var(--clr-orange)
+  rgb-primary: var(--rgb-orange)
+  clr-primary-dark: var(--clr-orange-darker)
+  rgb-primary-dark: var(--rgb-orange-darker)
+  clr-primary-light: var(--clr-orange-lighter)
+  rgb-primary-light: var(--rgb-orange-lighter)
+  clr-secondary: var(--clr-yellow)
+  rgb-secondary: var(--rgb-yellow)
+  clr-tertiary: var(--clr-red)
+  rgb-tertiary: var(--rgb-red)
+  clr-quaternary: var(--clr-amber)
+  rgb-quaternary: var(--rgb-amber)
+
+  modes:
+    light:
+      <<: *light
+      primary-color: "#FFA500" #The RGB value of rgb-orange as variables aren't supported in this field
+    dark:
+      <<: *dark
+      primary-color: "#FF8C00" #The RGB value of rgb-orange as variables aren't supported in this field
+
+Blocky Pink:
+  <<: *base
+
+  clr-primary: var(--clr-pink)
+  rgb-primary: var(--rgb-pink)
+  clr-primary-dark: var(--clr-pink-darker)
+  rgb-primary-dark: var(--rgb-pink-darker)
+  clr-primary-light: var(--clr-pink-lighter)
+  rgb-primary-light: var(--rgb-pink-lighter)
+  clr-secondary: var(--clr-purple)
+  rgb-secondary: var(--rgb-purple)
+  clr-tertiary: var(--clr-red)
+  rgb-tertiary: var(--rgb-red)
+  clr-quaternary: var(--clr-orange)
+  rgb-quaternary: var(--rgb-orange)
+
+  modes:
+    light:
+      <<: *light
+      primary-color: "#FF69B4" #The RGB value of rgb-pink as variables aren't supported in this field
+    dark:
+      <<: *dark
+      primary-color: "#FF1493" #The RGB value of rgb-pink as variables aren't supported in this field
+
+Blocky Teal:
+  <<: *base
+
+  clr-primary: var(--clr-teal)
+  rgb-primary: var(--rgb-teal)
+  clr-primary-dark: var(--clr-teal-darker)
+  rgb-primary-dark: var(--rgb-teal-darker)
+  clr-primary-light: var(--clr-teal-lighter)
+  rgb-primary-light: var(--rgb-teal-lighter)
+  clr-secondary: var(--clr-cyan)
+  rgb-secondary: var(--rgb-cyan)
+  clr-tertiary: var(--clr-green)
+  rgb-tertiary: var(--rgb-green)
+  clr-quaternary: var(--clr-blue)
+  rgb-quaternary: var(--rgb-blue)
+
+  modes:
+    light:
+      <<: *light
+      primary-color: "#008080" #The RGB value of rgb-teal as variables aren't supported in this field
+    dark:
+      <<: *dark
+      primary-color: "#008B8B" #The RGB value of rgb-teal as variables aren't supported in this field
