@@ -342,9 +342,6 @@ Blocky:
     ha-state-control-humidifier-humidity:
       $:
         .: |
-          :host {
-            margin-bottom: -22px;
-          }
           .buttons {
             gap: var(--feature-button-spacing) !important;
           }
@@ -366,9 +363,6 @@ Blocky:
     ha-state-control-climate-temperature:
       $:
         .: |
-          :host {
-            margin-bottom: -22px;
-          }
           .buttons {
             gap: var(--feature-button-spacing) !important;
           }
