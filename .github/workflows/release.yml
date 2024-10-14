@@ -1,0 +1,39 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+      - 'rc*'
+
+jobs:
+  create_release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Read changelog
+        id: get_changelog
+        run: |
+          echo "BODY=$(cat .github/CHANGELOG.md)" >> $GITHUB_OUTPUT
+
+      - name: Check if prerelease
+        id: check_prerelease
+        run: |
+          if [[ ${{ github.ref }} == 'refs/tags/rc*' ]]; then
+            echo "IS_PRERELEASE=true" >> $GITHUB_OUTPUT
+          else
+            echo "IS_PRERELEASE=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create GitHub Release
+        id: create_release
+        uses: actions/create-release@v1
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          body: ${{ steps.get_changelog.outputs.BODY }}
+          draft: false
+          prerelease: ${{ steps.check_prerelease.outputs.IS_PRERELEASE }}

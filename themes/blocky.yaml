@@ -217,14 +217,9 @@ Blocky: &base
   sidebar-selected-text-color: var(--sidebar-selected-icon-color)
 
   # Icons
-  icon-primary-color: currentcolor
   paper-item-icon-color: var(--icon-primary-color)
   paper-item-icon-active-color: var(--primary-color)
-  mdc-button-outline-color: var(--primary-color)
-  mdc-button-outline-width: 1px
-  mdc-button-disabled-ink-color: var(--disabled-text-color)
-
-  # States and Badges
+  icon-primary-color: currentcolor
   state-icon-color: var(--paper-item-icon-color)
   state-icon-active-color: var(--paper-item-icon-active-color)
   state-icon-unavailable-color: var(--disabled-text-color)
@@ -245,6 +240,11 @@ Blocky: &base
   label-badge-blue: var(--primary-color)
   label-badge-yellow: var(--clr-yellow)
   label-badge-grey: var(--clr-gray-lighter)
+
+  # Buttons
+  mdc-button-outline-color: var(--primary-color)
+  mdc-button-outline-width: 1px
+  mdc-button-disabled-ink-color: var(--disabled-text-color)
 
   # Energy
   energy-grid-consumption-color: var(--clr-purple)
@@ -274,12 +274,21 @@ Blocky: &base
   switch-checked-track-color: var(--primary-color)
   switch-unchecked-button-color: var(--clr-gray)
   switch-unchecked-track-color: var(--clr-dark-gray)
+  mdc-radio-unchecked-color: var(--clr-dark-gray)
+  mdc-radio-checked-color: var(--primary-color)
 
   # Toggles
   paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
   paper-toggle-button-checked-bar-color: var(--switch-checked-track-color)
   paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color)
   paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
+
+  # Color Picker
+  ha-color-picker-wheel-borderwidth: var(--border-width)
+  ha-color-picker-wheel-bordercolor: var(--clr-background-card)
+  ha-color-picker-wheel-shadow: none
+  ha-color-picker-marker-borderwidth: var(--border-width)
+  ha-color-picker-marker-bordercolor: var(--clr-background-card)
 
   # Table
   table-row-background-color: var(--clr-background)
@@ -324,7 +333,6 @@ Blocky: &base
   feature-height: 60px
   feature-button-spacing: var(--spacing)
   md-dialog-container-shape: 0
-  md-sys-shape-corner-full: 0
   control-switch-border-radius: 0
   control-select-border-radius: 0
   control-select-button-border-radius: 0
