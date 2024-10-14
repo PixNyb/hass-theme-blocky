@@ -228,6 +228,7 @@ Blocky: &base
   state-icon-color: var(--paper-item-icon-color)
   state-icon-active-color: var(--paper-item-icon-active-color)
   state-icon-unavailable-color: var(--disabled-text-color)
+  state-inactive-color: var(--text-color)
 
   # Sliders
   paper-slider-knob-color: var(--primary-color)
