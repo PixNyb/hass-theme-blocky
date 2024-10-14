@@ -17,7 +17,11 @@ jobs:
       - name: Read changelog
         id: get_changelog
         run: |
-          echo "BODY=$(cat .github/CHANGELOG.md)" >> $GITHUB_OUTPUT
+          # Get the current tag version
+          CURRENT_TAG=$(echo "${{ github.ref }}" | sed -n 's/refs\/tags\/v//p')
+          BODY=$(cat CHANGELOG.md | awk '/## \['$CURRENT_TAG'\]/{flag=1; next} /## \[/{flag=0} flag')
+          BODY=$(echo "$BODY" | sed 's/"/\\"/g')
+          echo "BODY=$BODY" >> $GITHUB_ENV
 
       - name: Check if prerelease
         id: check_prerelease
