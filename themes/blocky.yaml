@@ -247,13 +247,13 @@ Blocky: &base
   label-badge-grey: var(--clr-gray-lighter)
 
   # Energy
-  energy-grid-consumption-color: var(--clr-indigo)
+  energy-grid-consumption-color: var(--clr-purple)
   energy-grid-return-color: var(--clr-green)
   energy-solar-color: var(--clr-yellow)
   energy-non-fossil-color: var(--clr-green)
   energy-battery-out-color: var(--clr-red)
   energy-battery-in-color: var(--clr-green)
-  energy-gas-color: var(--clr-orange)
+  energy-gas-color: var(--clr-deep-orange)
   energy-water-color: var(--clr-blue)
 
   # Cards
