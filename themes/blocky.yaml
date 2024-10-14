@@ -354,6 +354,7 @@ Blocky: &base
       $: |
         .initials {
           border-radius: 0 !important;
+          color: var(--clr-primary-dark) !important;
         }
 
   card-mod-view-yaml: |
