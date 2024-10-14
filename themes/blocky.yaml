@@ -18,13 +18,8 @@ Blocky: &base
 
   background-color: var(--clr-background)
   background-card-color: var(--clr-background-card)
-  background-header-color: "rgba(var(--clr-background-header), 1)"
+  background-header-color: var(--clr-background-header)
   text-color: var(--clr-text)
-  primary-text-color: var(--clr-text)
-  text-secondary-color: var(--clr-text-secondary)
-  secondary-text-color: var(--clr-text-secondary)
-  text-disabled-color: var(--clr-text-disabled)
-  disabled-text-color: var(--clr-text-disabled)
 
   # Blocky Theme colors
   clr-white: "rgb(var(--rgb-white))"
@@ -178,6 +173,19 @@ Blocky: &base
   warning-color: var(--clr-orange)
   success-color: var(--clr-green)
   info-color: var(--clr-blue)
+  disabled-color: var(--clr-gray-darker)
+
+  rgb-primary-text-color: var(--rgb-text)
+  rgb-secondary-text-color: var(--rgb-text-secondary)
+  rgb-text-primary-color: var(--rgb-text)
+  rgb-card-background-color: var(--rgb-background-card)
+
+  light-theme-text-color: var(--clr-text)
+  light-theme-secondary-color: var(--clr-text-secondary)
+  light-theme-disabled-color: var(--clr-text-disabled)
+  light-theme-background-color: var(--clr-background)
+  light-theme-secondary-background-color: var(--clr-background-card)
+  dark-theme-base-color: var(--clr-black)
 
   # Text Colors
   text-primary-color: var(--clr-text)
@@ -235,7 +243,7 @@ Blocky: &base
   label-badge-green: var(--clr-green)
   label-badge-blue: var(--primary-color)
   label-badge-yellow: var(--clr-yellow)
-  label-badge-grey: var(--clr-gray)
+  label-badge-grey: var(--clr-gray-lighter)
 
   # Energy
   energy-grid-consumption-color: var(--clr-indigo)
@@ -287,7 +295,7 @@ Blocky: &base
   code-editor-background-color: var(--clr-background-card)
 
   # Checkboxes
-  mdc-checkbox-unchecked-color: var(--clr-gray-dark)
+  mdc-checkbox-unchecked-color: var(--clr-dark-gray)
   mdc-checkbox-disable-color: var(--disabled-text-color)
 
   # Input
@@ -568,9 +576,6 @@ Blocky: &base
       rgb-text: var(--rgb-black)
       rgb-text-secondary: var(--rgb-dark-gray)
       rgb-text-disabled: var(--rgb-light-gray)
-      rgb-light-grey: var(--rgb-light-gray)
-      rgb-grey: var(--rgb-gray)
-      rgb-dark-grey: var(--rgb-dark-gray)
 
       rgb-white: "255, 255, 255"
       rgb-white-darker: "179, 179, 179"
@@ -579,6 +584,10 @@ Blocky: &base
       rgb-black: "0, 0, 0"
       rgb-black-darker: "0, 0, 0"
       rgb-black-lighter: "51, 51, 51"
+
+      rgb-light-gray: "211, 211, 211"
+      rgb-light-gray-darker: "148, 148, 148"
+      rgb-light-gray-lighter: "255, 255, 255"
 
       rgb-gray: "248, 248, 248"
       rgb-gray-darker: "173, 173, 173"
@@ -668,11 +677,8 @@ Blocky: &base
       rgb-background-card: var(--rgb-gray)
       rgb-background-header: var(--rgb-background)
       rgb-text: var(--rgb-white)
-      rgb-text-secondary: var(--rgb-light-gray)
+      rgb-text-secondary: var(--rgb-white-darker)
       rgb-text-disabled: var(--rgb-light-gray)
-      rgb-light-grey: var(--rgb-light-gray)
-      rgb-grey: var(--rgb-gray)
-      rgb-dark-grey: var(--rgb-dark-gray)
 
       rgb-white: "208, 208, 208"
       rgb-white-darker: "147, 147, 147"
@@ -681,6 +687,10 @@ Blocky: &base
       rgb-black: "29, 29, 29"
       rgb-black-darker: "0, 0, 0"
       rgb-black-lighter: "51, 51, 51"
+
+      rgb-light-gray: "140, 140, 140"
+      rgb-light-gray-darker: "98, 98, 98"
+      rgb-light-gray-lighter: "168, 168, 168"
 
       rgb-gray: "39, 39, 39"
       rgb-gray-darker: "27, 27, 27"
