@@ -370,13 +370,17 @@ Blocky: &base
       $:
         .: |
           hui-view-badges {
-            margin-bottom: 4px !important;
+            margin-bottom: var(--spacing) !important;
           }
           div.edit-mode hui-card-options:hover {
             outline: var(--border-width) solid var(--clr-dark-gray);
           }
         hui-view-badges:
           $:
+            .: |
+              .badges {
+                gap: var(--gap-width) !important;
+              }
             hui-entity-badge:
               $:
                 ha-badge:
@@ -412,6 +416,7 @@ Blocky: &base
         border-radius: 0 !important;
         background: var(--clr-background);
       }
+      ha-card.type-media-control,
       ha-card.type-custom-mini-media-player {
         border: var(--border-width) solid var(--clr-background-card);
       }
