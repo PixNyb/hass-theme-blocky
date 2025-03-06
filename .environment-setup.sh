@@ -29,11 +29,14 @@ sudo apt-get install -y \
 
 (
     # Create the Home Assistant Core virtual environment
+    python3 -m venv $PROJECT_FOLDER/.venv
     source $PROJECT_FOLDER/.venv/bin/activate
+
+    echo -e "source $PROJECT_FOLDER/.venv/bin/activate > ~/.bashrc"
 
     # Install wheel and Home Assistant Core
     python3 -m pip install wheel
-    pip3 install homeassistant==2024.10.2
+    pip3 install homeassistant
 
     hass > /dev/null 2>&1 &
     HASS_PID=$!
