@@ -435,8 +435,12 @@ Blocky: &base
               border-radius: 0 !important;
             }
     ha-tile-icon:
+      .: |
+        ha-tile-icon {
+          padding: 8px !important;
+        }
       $: |
-        .shape {
+        .container {
           --mdc-icon-size: 24px;
           border-radius: 0 !important;
           width: 40px !important;
