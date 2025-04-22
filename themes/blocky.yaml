@@ -349,6 +349,7 @@ Blocky: &base
   stack-card-gap: var(--gap-width)
   grid-card-gap: var(--gap-width)
   masonry-view-card-margin: calc(var(--gap-width) / 2) calc(var(--gap-width) / 2) var(--gap-width) calc(var(--gap-width) / 2)
+  ha-section-grid-row-height: 64px
 
   # Card-Mod
   card-mod-theme: "Blocky"
@@ -393,6 +394,12 @@ Blocky: &base
     .: |
       ha-card {
         transition: none;
+      }
+      ha-card .container:has(hui-card-features):not(.horizontal) .content {
+        flex-grow: 0;
+      }
+      ha-card .container:not(.horizontal) hui-card-features {
+        margin-top: auto;
       }
       ha-card.type-tile {
         padding: 7px;
@@ -447,6 +454,10 @@ Blocky: &base
           height: 40px !important;
         }
     hui-card-features:
+      .: |
+        :host {
+          margin-top: auto;
+        }
       $:
         .: |
           .container {
