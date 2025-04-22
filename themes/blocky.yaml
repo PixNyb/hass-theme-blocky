@@ -389,6 +389,17 @@ Blocky: &base
                     .badge {
                       border-radius: 0 !important;
                     }
+        hui-view-header:
+          $:
+            hui-view-badges:
+              $:
+                hui-entity-badge:
+                  $:
+                    ha-badge:
+                      $: |
+                        .badge {
+                          border-radius: 0 !important;
+                        }
 
   card-mod-card-yaml: |
     .: |
