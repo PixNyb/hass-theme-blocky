@@ -4,142 +4,599 @@
 # Description: A clean and modern theme for Home Assistant based on the styling used on https://roelc.me
 # ---
 
-Blocky: &base
-  gap-width: 16px
-  spacing: calc(var(--gap-width) / 2)
-  border-width: calc(var(--gap-width) / 2)
+Blocky:
+  <<: &base
+    gap-width: 16px
+    spacing: calc(var(--gap-width) / 2)
+    border-width: calc(var(--gap-width) / 2)
 
-  clr-background: "rgb(var(--rgb-background))"
-  clr-background-card: "rgb(var(--rgb-background-card))"
-  clr-background-header: "rgba(var(--rgb-background-header), 1)"
-  clr-text: "rgb(var(--rgb-text))"
-  clr-text-secondary: "rgb(var(--rgb-text-secondary))"
-  clr-text-disabled: "rgb(var(--rgb-text-disabled))"
+    clr-background: "rgb(var(--rgb-background))"
+    clr-background-card: "rgb(var(--rgb-background-card))"
+    clr-background-header: "rgba(var(--rgb-background-header), 1)"
+    clr-text: "rgb(var(--rgb-text))"
+    clr-text-secondary: "rgb(var(--rgb-text-secondary))"
+    clr-text-disabled: "rgb(var(--rgb-text-disabled))"
 
-  background-color: var(--clr-background)
-  background-card-color: var(--clr-background-card)
-  background-header-color: var(--clr-background-header)
-  text-color: var(--clr-text)
+    background-color: var(--clr-background)
+    background-card-color: var(--clr-background-card)
+    background-header-color: var(--clr-background-header)
+    text-color: var(--clr-text)
 
-  # Blocky Theme colors
-  clr-white: "rgb(var(--rgb-white))"
-  clr-white-darker: "rgb(var(--rgb-white-darker))"
-  clr-white-lighter: "rgb(var(--rgb-white-lighter))"
+    # Blocky Theme colors
+    clr-white: "rgb(var(--rgb-white))"
+    clr-white-darker: "rgb(var(--rgb-white-darker))"
+    clr-white-lighter: "rgb(var(--rgb-white-lighter))"
 
-  clr-black: "rgb(var(--rgb-black))"
-  clr-black-darker: "rgb(var(--rgb-black-darker))"
-  clr-black-lighter: "rgb(var(--rgb-black-lighter))"
+    clr-black: "rgb(var(--rgb-black))"
+    clr-black-darker: "rgb(var(--rgb-black-darker))"
+    clr-black-lighter: "rgb(var(--rgb-black-lighter))"
 
-  clr-light-gray: "rgb(var(--rgb-light-gray))"
-  clr-light-gray-darker: "rgb(var(--rgb-light-gray-darker))"
-  clr-light-gray-lighter: "rgb(var(--rgb-light-gray-lighter))"
+    clr-light-gray: "rgb(var(--rgb-light-gray))"
+    clr-light-gray-darker: "rgb(var(--rgb-light-gray-darker))"
+    clr-light-gray-lighter: "rgb(var(--rgb-light-gray-lighter))"
 
-  clr-gray: "rgb(var(--rgb-gray))"
-  clr-gray-darker: "rgb(var(--rgb-gray-darker))"
-  clr-gray-lighter: "rgb(var(--rgb-gray-lighter))"
+    clr-gray: "rgb(var(--rgb-gray))"
+    clr-gray-darker: "rgb(var(--rgb-gray-darker))"
+    clr-gray-lighter: "rgb(var(--rgb-gray-lighter))"
 
-  clr-dark-gray: "rgb(var(--rgb-dark-gray))"
-  clr-dark-gray-darker: "rgb(var(--rgb-dark-gray-darker))"
-  clr-dark-gray-lighter: "rgb(var(--rgb-dark-gray-lighter))"
+    clr-dark-gray: "rgb(var(--rgb-dark-gray))"
+    clr-dark-gray-darker: "rgb(var(--rgb-dark-gray-darker))"
+    clr-dark-gray-lighter: "rgb(var(--rgb-dark-gray-lighter))"
 
-  clr-red: "rgb(var(--rgb-red))"
-  clr-red-darker: "rgb(var(--rgb-red-darker))"
-  clr-red-lighter: "rgb(var(--rgb-red-lighter))"
+    clr-red: "rgb(var(--rgb-red))"
+    clr-red-darker: "rgb(var(--rgb-red-darker))"
+    clr-red-lighter: "rgb(var(--rgb-red-lighter))"
 
-  clr-pink: "rgb(var(--rgb-pink))"
-  clr-pink-darker: "rgb(var(--rgb-pink-darker))"
-  clr-pink-lighter: "rgb(var(--rgb-pink-lighter))"
+    clr-pink: "rgb(var(--rgb-pink))"
+    clr-pink-darker: "rgb(var(--rgb-pink-darker))"
+    clr-pink-lighter: "rgb(var(--rgb-pink-lighter))"
 
-  clr-orange: "rgb(var(--rgb-orange))"
-  clr-orange-darker: "rgb(var(--rgb-orange-darker))"
-  clr-orange-lighter: "rgb(var(--rgb-orange-lighter))"
+    clr-orange: "rgb(var(--rgb-orange))"
+    clr-orange-darker: "rgb(var(--rgb-orange-darker))"
+    clr-orange-lighter: "rgb(var(--rgb-orange-lighter))"
 
-  clr-yellow: "rgb(var(--rgb-yellow))"
-  clr-yellow-darker: "rgb(var(--rgb-yellow-darker))"
-  clr-yellow-lighter: "rgb(var(--rgb-yellow-lighter))"
+    clr-yellow: "rgb(var(--rgb-yellow))"
+    clr-yellow-darker: "rgb(var(--rgb-yellow-darker))"
+    clr-yellow-lighter: "rgb(var(--rgb-yellow-lighter))"
 
-  clr-blue: "rgb(var(--rgb-blue))"
-  clr-blue-darker: "rgb(var(--rgb-blue-darker))"
-  clr-blue-lighter: "rgb(var(--rgb-blue-lighter))"
+    clr-blue: "rgb(var(--rgb-blue))"
+    clr-blue-darker: "rgb(var(--rgb-blue-darker))"
+    clr-blue-lighter: "rgb(var(--rgb-blue-lighter))"
 
-  clr-teal: "rgb(var(--rgb-teal))"
-  clr-teal-darker: "rgb(var(--rgb-teal-darker))"
-  clr-teal-lighter: "rgb(var(--rgb-teal-lighter))"
+    clr-teal: "rgb(var(--rgb-teal))"
+    clr-teal-darker: "rgb(var(--rgb-teal-darker))"
+    clr-teal-lighter: "rgb(var(--rgb-teal-lighter))"
 
-  clr-green: "rgb(var(--rgb-green))"
-  clr-green-darker: "rgb(var(--rgb-green-darker))"
-  clr-green-lighter: "rgb(var(--rgb-green-lighter))"
+    clr-green: "rgb(var(--rgb-green))"
+    clr-green-darker: "rgb(var(--rgb-green-darker))"
+    clr-green-lighter: "rgb(var(--rgb-green-lighter))"
 
-  clr-brown: "rgb(var(--rgb-brown))"
-  clr-brown-darker: "rgb(var(--rgb-brown-darker))"
-  clr-brown-lighter: "rgb(var(--rgb-brown-lighter))"
+    clr-brown: "rgb(var(--rgb-brown))"
+    clr-brown-darker: "rgb(var(--rgb-brown-darker))"
+    clr-brown-lighter: "rgb(var(--rgb-brown-lighter))"
 
-  clr-purple: "rgb(var(--rgb-purple))"
-  clr-purple-darker: "rgb(var(--rgb-purple-darker))"
-  clr-purple-lighter: "rgb(var(--rgb-purple-lighter))"
+    clr-purple: "rgb(var(--rgb-purple))"
+    clr-purple-darker: "rgb(var(--rgb-purple-darker))"
+    clr-purple-lighter: "rgb(var(--rgb-purple-lighter))"
 
-  clr-deep-purple: "rgb(var(--rgb-deep-purple))"
-  clr-deep-purple-darker: "rgb(var(--rgb-deep-purple-darker))"
-  clr-deep-purple-lighter: "rgb(var(--rgb-deep-purple-lighter))"
+    clr-deep-purple: "rgb(var(--rgb-deep-purple))"
+    clr-deep-purple-darker: "rgb(var(--rgb-deep-purple-darker))"
+    clr-deep-purple-lighter: "rgb(var(--rgb-deep-purple-lighter))"
 
-  clr-indigo: "rgb(var(--rgb-indigo))"
-  clr-indigo-darker: "rgb(var(--rgb-indigo-darker))"
-  clr-indigo-lighter: "rgb(var(--rgb-indigo-lighter))"
+    clr-indigo: "rgb(var(--rgb-indigo))"
+    clr-indigo-darker: "rgb(var(--rgb-indigo-darker))"
+    clr-indigo-lighter: "rgb(var(--rgb-indigo-lighter))"
 
-  clr-light-blue: "rgb(var(--rgb-light-blue))"
-  clr-light-blue-darker: "rgb(var(--rgb-light-blue-darker))"
-  clr-light-blue-lighter: "rgb(var(--rgb-light-blue-lighter))"
+    clr-light-blue: "rgb(var(--rgb-light-blue))"
+    clr-light-blue-darker: "rgb(var(--rgb-light-blue-darker))"
+    clr-light-blue-lighter: "rgb(var(--rgb-light-blue-lighter))"
 
-  clr-cyan: "rgb(var(--rgb-cyan))"
-  clr-cyan-darker: "rgb(var(--rgb-cyan-darker))"
-  clr-cyan-lighter: "rgb(var(--rgb-cyan-lighter))"
+    clr-cyan: "rgb(var(--rgb-cyan))"
+    clr-cyan-darker: "rgb(var(--rgb-cyan-darker))"
+    clr-cyan-lighter: "rgb(var(--rgb-cyan-lighter))"
 
-  clr-light-green: "rgb(var(--rgb-light-green))"
-  clr-light-green-darker: "rgb(var(--rgb-light-green-darker))"
-  clr-light-green-lighter: "rgb(var(--rgb-light-green-lighter))"
+    clr-light-green: "rgb(var(--rgb-light-green))"
+    clr-light-green-darker: "rgb(var(--rgb-light-green-darker))"
+    clr-light-green-lighter: "rgb(var(--rgb-light-green-lighter))"
 
-  clr-lime: "rgb(var(--rgb-lime))"
-  clr-lime-darker: "rgb(var(--rgb-lime-darker))"
-  clr-lime-lighter: "rgb(var(--rgb-lime-lighter))"
+    clr-lime: "rgb(var(--rgb-lime))"
+    clr-lime-darker: "rgb(var(--rgb-lime-darker))"
+    clr-lime-lighter: "rgb(var(--rgb-lime-lighter))"
 
-  clr-amber: "rgb(var(--rgb-amber))"
-  clr-amber-darker: "rgb(var(--rgb-amber-darker))"
-  clr-amber-lighter: "rgb(var(--rgb-amber-lighter))"
+    clr-amber: "rgb(var(--rgb-amber))"
+    clr-amber-darker: "rgb(var(--rgb-amber-darker))"
+    clr-amber-lighter: "rgb(var(--rgb-amber-lighter))"
 
-  clr-deep-orange: "rgb(var(--rgb-deep-orange))"
-  clr-deep-orange-darker: "rgb(var(--rgb-deep-orange-darker))"
-  clr-deep-orange-lighter: "rgb(var(--rgb-deep-orange-lighter))"
+    clr-deep-orange: "rgb(var(--rgb-deep-orange))"
+    clr-deep-orange-darker: "rgb(var(--rgb-deep-orange-darker))"
+    clr-deep-orange-lighter: "rgb(var(--rgb-deep-orange-lighter))"
 
-  clr-blue-grey: "rgb(var(--rgb-blue-grey))"
-  clr-blue-grey-darker: "rgb(var(--rgb-blue-grey-darker))"
-  clr-blue-grey-lighter: "rgb(var(--rgb-blue-grey-lighter))"
+    clr-blue-grey: "rgb(var(--rgb-blue-grey))"
+    clr-blue-grey-darker: "rgb(var(--rgb-blue-grey-darker))"
+    clr-blue-grey-lighter: "rgb(var(--rgb-blue-grey-lighter))"
 
-  white-color: var(--clr-white)
-  black-color: var(--clr-black)
-  light-gray-color: var(--clr-light-gray)
-  light-grey-color: var(--clr-light-gray)
-  gray-color: var(--clr-gray)
-  grey-color: var(--clr-gray)
-  dark-gray-color: var(--clr-dark-gray)
-  dark-grey-color: var(--clr-dark-gray)
-  red-color: var(--clr-red)
-  pink-color: var(--clr-pink)
-  orange-color: var(--clr-orange)
-  yellow-color: var(--clr-yellow)
-  blue-color: var(--clr-blue)
-  teal-color: var(--clr-teal)
-  green-color: var(--clr-green)
-  brown-color: var(--clr-brown)
-  purple-color: var(--clr-purple)
-  deep-purple-color: var(--clr-deep-purple)
-  indigo-color: var(--clr-indigo)
-  light-blue-color: var(--clr-light-blue)
-  cyan-color: var(--clr-cyan)
-  light-green-color: var(--clr-light-green)
-  lime-color: var(--clr-lime)
-  amber-color: var(--clr-amber)
-  deep-orange-color: var(--clr-deep-orange)
-  blue-grey-color: var(--clr-blue-grey)
+    white-color: var(--clr-white)
+    black-color: var(--clr-black)
+    light-gray-color: var(--clr-light-gray)
+    light-grey-color: var(--clr-light-gray)
+    gray-color: var(--clr-gray)
+    grey-color: var(--clr-gray)
+    dark-gray-color: var(--clr-dark-gray)
+    dark-grey-color: var(--clr-dark-gray)
+    red-color: var(--clr-red)
+    pink-color: var(--clr-pink)
+    orange-color: var(--clr-orange)
+    yellow-color: var(--clr-yellow)
+    blue-color: var(--clr-blue)
+    teal-color: var(--clr-teal)
+    green-color: var(--clr-green)
+    brown-color: var(--clr-brown)
+    purple-color: var(--clr-purple)
+    deep-purple-color: var(--clr-deep-purple)
+    indigo-color: var(--clr-indigo)
+    light-blue-color: var(--clr-light-blue)
+    cyan-color: var(--clr-cyan)
+    light-green-color: var(--clr-light-green)
+    lime-color: var(--clr-lime)
+    amber-color: var(--clr-amber)
+    deep-orange-color: var(--clr-deep-orange)
+    blue-grey-color: var(--clr-blue-grey)
+
+
+    # Main Interface Colors
+    divider-color: var(--clr-background)
+    primary-color: var(--clr-primary)
+    rgb-primary-color: var(--rgb-primary)
+    dark-primary-color: var(--clr-primary-dark)
+    rgb-dark-primary-color: var(--rgb-primary-dark)
+    light-primary-color: var(--clr-primary-light)
+    rgb-light-primary-color: var(--rgb-primary-light)
+    accent-color: var(--clr-secondary)
+    rgb-accent-color: var(--rgb-secondary)
+    accent-color-2: var(--clr-tertiary)
+    rgb-accent-color-2: var(--rgb-tertiary)
+    accent-color-3: var(--clr-quaternary)
+    rgb-accent-color-3: var(--rgb-quaternary)
+
+    error-color: var(--clr-red)
+    warning-color: var(--clr-orange)
+    success-color: var(--clr-green)
+    info-color: var(--clr-blue)
+    disabled-color: var(--clr-gray-darker)
+
+    rgb-primary-text-color: var(--rgb-text)
+    rgb-secondary-text-color: var(--rgb-text-secondary)
+    rgb-text-primary-color: var(--rgb-text)
+    rgb-card-background-color: var(--rgb-background-card)
+
+    light-theme-text-color: var(--clr-text)
+    light-theme-secondary-color: var(--clr-text-secondary)
+    light-theme-disabled-color: var(--clr-text-disabled)
+    light-theme-background-color: var(--clr-background)
+    light-theme-secondary-background-color: var(--clr-background-card)
+    dark-theme-base-color: var(--clr-black)
+
+    # Text Colors
+    text-primary-color: var(--clr-text)
+    primary-text-color: var(--text-primary-color)
+    secondary-text-color: var(--clr-text-secondary)
+    light-primary-text-color: var(--clr-text-secondary)
+    text-light-primary-color: var(--light-primary-text-color)
+    text-disabled-color: var(--clr-text-disabled)
+    disabled-text-color: var(--clr-text-disabled)
+    accent-text-color: var(--clr-gray)
+    text-accent-color: var(--accent-text-color)
+
+    lovelace-background: var(--clr-background)
+    primary-background-color: var(--clr-background)
+    secondary-background-color: var(--clr-background-card)
+
+    app-header-text-color: var(--clr-text)
+    app-header-selection-bar-color: var(--clr-gray)
+    app-header-edit-background-color: var(--clr-gray)
+    app-header-edit-text-color: var(--clr-text)
+    app-header-border-bottom: none
+    mdc-top-app-bar-fixed-box-shadow: none
+
+    # Sidebar Menu
+    sidebar-icon-color: var(--clr-text-secondary)
+    sidebar-text-color: var(--sidebar-icon-color)
+    sidebar-background-color: var(--clr-background-header)
+    sidebar-selected-icon-color: var(--primary-color)
+    sidebar-selected-text-color: var(--sidebar-selected-icon-color)
+
+    # Icons
+    paper-item-icon-color: var(--icon-primary-color)
+    paper-item-icon-active-color: var(--primary-color)
+    icon-primary-color: currentcolor
+    state-icon-color: var(--paper-item-icon-color)
+    state-icon-active-color: var(--paper-item-icon-active-color)
+    state-icon-unavailable-color: var(--disabled-text-color)
+    state-inactive-color: var(--clr-light-gray)
+
+    # Sliders
+    paper-slider-knob-color: var(--primary-color)
+    paper-slider-knob-start-color: var(--paper-slider-knob-color)
+    paper-slider-pin-color: var(--paper-slider-knob-color)
+    paper-slider-active-color: var(--paper-slider-knob-color)
+    paper-slider-secondary-color: var(--primary-color)
+
+    # Labels
+    label-badge-background-color: var(--clr-background-card)
+    label-badge-text-color: var(--clr-text)
+    label-badge-red: var(--clr-red)
+    label-badge-green: var(--clr-green)
+    label-badge-blue: var(--primary-color)
+    label-badge-yellow: var(--clr-yellow)
+    label-badge-grey: var(--clr-gray-lighter)
+
+    # Buttons
+    mdc-button-outline-color: var(--primary-color)
+    mdc-button-outline-width: 1px
+    mdc-button-disabled-ink-color: var(--disabled-text-color)
+
+    # Energy
+    energy-grid-consumption-color: var(--clr-purple)
+    energy-grid-return-color: var(--clr-green)
+    energy-solar-color: var(--clr-yellow)
+    energy-non-fossil-color: var(--clr-green)
+    energy-battery-out-color: var(--clr-red)
+    energy-battery-in-color: var(--clr-green)
+    energy-gas-color: var(--clr-deep-orange)
+    energy-water-color: var(--clr-blue)
+
+    # Cards
+    card-background-color: var(--clr-background-card)
+    ha-card-background: var(--clr-background-card)
+    ha-card-border-color: transparent
+    paper-dialog-background-color: var(--card-background-color)
+    paper-listbox-background-color: var(--card-background-color)
+    paper-card-background-color: var(--card-background-color)
+    ha-card-border-radius: 0
+    ha-config-card-border-radius: 0
+    ha-dialog-border-radius: 0
+    mdc-shape-small: 0
+    ha-card-border-width: 0
+
+    # Switches
+    switch-checked-button-color: var(--primary-color)
+    switch-checked-track-color: var(--primary-color)
+    switch-unchecked-button-color: var(--clr-gray)
+    switch-unchecked-track-color: var(--clr-dark-gray)
+    mdc-radio-unchecked-color: var(--clr-dark-gray)
+    mdc-radio-checked-color: var(--primary-color)
+
+    # Toggles
+    paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
+    paper-toggle-button-checked-bar-color: var(--switch-checked-track-color)
+    paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color)
+    paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
+
+    # Color Picker
+    ha-color-picker-wheel-borderwidth: var(--border-width)
+    ha-color-picker-wheel-bordercolor: var(--clr-background-card)
+    ha-color-picker-wheel-shadow: none
+    ha-color-picker-marker-borderwidth: var(--border-width)
+    ha-color-picker-marker-bordercolor: var(--clr-background-card)
+
+    # Table
+    table-row-background-color: var(--clr-background)
+    table-row-alternative-background-color: var(--clr-background-card)
+    data-table-background-color: var(--clr-background)
+
+    # Dropdowns
+    material-background-color: var(--clr-background-card)
+    material-secondary-background-color: var(--clr-background)
+    mdc-theme-surface: var(--clr-background-card)
+
+    # Pre/Code
+    markdown-code-background-color: var(--clr-background-card)
+    code-editor-background-color: var(--clr-background-card)
+
+    # Checkboxes
+    mdc-checkbox-unchecked-color: var(--clr-dark-gray)
+    mdc-checkbox-disable-color: var(--disabled-text-color)
+
+    # Input
+    input-fill-color: var(--clr-background-card)
+    input-dropdown-icon-color: var(--icon-primary-color)
+    input-ink-color: var(--clr-text)
+    input-label-ink-color: var(--clr-text)
+    input-idle-line-color: var(--clr-text)
+    input-hover-line-color: var(--primary-color)
+
+    mdc-select-fill-color: var(--input-fill-color)
+    mdc-select-ink-color: var(--input-ink-color)
+    mdc-select-label-ink-color: var(--input-label-ink-color)
+    mdc-select-idle-line-color: var(--input-idle-line-color)
+    mdc-select-dropdown-icon-color: var(--input-dropdown-icon-color)
+    mdc-select-hover-line-color: var(--input-hover-line-color)
+    mdc-text-field-fill-color: var(--input-fill-color)
+    mdc-text-field-ink-color: var(--input-ink-color)
+    mdc-text-field-label-ink-color: var(--input-label-ink-color)
+    mdc-text-field-idle-line-color: var(--input-idle-line-color)
+    mdc-text-field-dropdown-icon-color: var(--input-dropdown-icon-color)
+    mdc-text-field-hover-line-color: var(--input-hover-line-color)
+
+    feature-border-radius: 0
+    feature-height: 60px
+    feature-button-spacing: var(--spacing)
+    md-dialog-container-shape: 0
+    control-switch-border-radius: 0
+    control-select-border-radius: 0
+    control-select-button-border-radius: 0
+    control-select-background: var(--clr-background)
+
+    mini-media-player-button-color: rgba(var(--rgb-background), .6)
+    mini-media-player-overlay-color: rgba(var(--rgb-background-card), .8)
+    mini-media-player-overlay-base-color: var(--clr-text)
+    mini-media-player-overlay-accent-color: var(--clr-primary)
+    mini-media-player-overlay-info-color: var(--clr-secondary)
+    mini-media-player-overlay-color-stop: 75%
+    mini-media-player-progress-height: var(--border-width)
+
+    stack-card-gap: var(--gap-width)
+    grid-card-gap: var(--gap-width)
+    masonry-view-card-margin: calc(var(--gap-width) / 2) calc(var(--gap-width) / 2) var(--gap-width) calc(var(--gap-width) / 2)
+    ha-section-grid-row-height: 64px
+
+    # Card-Mod
+    card-mod-theme: "Blocky"
+
+    card-mod-sidebar-yaml: |
+      .: |
+        a.iron-selected paper-icon-item::before {
+          border-radius: 0;
+        }
+      a.profile paper-icon-item ha-user-badge:
+        $: |
+          .initials {
+            border-radius: 0 !important;
+            color: var(--clr-primary-dark) !important;
+          }
+
+    card-mod-view-yaml: |
+      "*:first-child":
+        $:
+          .: |
+            hui-view-badges {
+              margin-bottom: var(--spacing) !important;
+            }
+            div.edit-mode hui-card-options:hover {
+              outline: var(--border-width) solid var(--clr-dark-gray);
+            }
+          hui-view-badges:
+            $:
+              .: |
+                .badges {
+                  gap: var(--gap-width) !important;
+                }
+              hui-entity-badge:
+                $:
+                  ha-badge:
+                    $: |
+                      .badge {
+                        border-radius: 0 !important;
+                      }
+          hui-view-header:
+            $:
+              hui-view-badges:
+                $:
+                  hui-entity-badge:
+                    $:
+                      ha-badge:
+                        $: |
+                          .badge {
+                            border-radius: 0 !important;
+                          }
+
+    card-mod-card-yaml: |
+      .: |
+        ha-card {
+          transition: none;
+        }
+        ha-card .container:has(hui-card-features):not(.horizontal) .content {
+          flex-grow: 0;
+        }
+        ha-card .container:not(.horizontal) hui-card-features {
+          margin-top: auto;
+        }
+        ha-card.type-tile {
+          padding: 7px;
+        }
+        ha-card.type-tile ha-ripple {
+          inset: var(--border-width);
+        }
+        ha-card.type-button,
+        ha-card.type-picture,
+        ha-card.type-picture-entity,
+        ha-card.type-picture-glance,
+        ha-card.type-picture-elements {
+          padding: var(--border-width);
+        }
+        ha-card.type-button ha-ripple,
+        ha-card.type-picture-entity .footer,
+        ha-card.type-picture-glance .box {
+          margin: var(--border-width);
+        }
+        ha-card.type-glance .entity:focus {
+          border-radius: 0 !important;
+          background: var(--clr-background);
+        }
+        ha-card.type-media-control,
+        ha-card.type-custom-mini-media-player {
+          border: var(--border-width) solid var(--clr-background-card);
+        }
+        ha-card.type-custom-mini-media-player .mmp-player {
+          padding-left: calc(16px - var(--border-width)) !important;
+          padding-right: calc(16px - var(--border-width)) !important;
+        }
+        ha-card.type-custom-mini-media-player[artwork*="full-cover"].--has-artwork .mmp-player {
+          background: linear-gradient(to top, rgba(var(--rgb-background-card), 1) calc(var(--border-width) * 1.5), rgba(var(--rgb-background-card), .8) 50%, rgba(var(--rgb-background-card), .4) 80%, rgba(var(--rgb-background-card), 0) 100%) !important;
+        }
+      ha-full-calendar:
+        $:
+          ha-button-toggle-group:
+            $: |
+              ha-icon-button {
+                border-radius: 0 !important;
+              }
+      ha-tile-icon:
+        .: |
+          ha-tile-icon {
+            padding: 8px !important;
+          }
+        $: |
+          .container {
+            --mdc-icon-size: 24px;
+            border-radius: 0 !important;
+            width: 40px !important;
+            height: 40px !important;
+          }
+      hui-card-features:
+        .: |
+          :host {
+            margin-top: auto;
+          }
+        $:
+          .: |
+            .container {
+              padding: 0 10px 10px 10px !important;
+            }
+          hui-card-feature:
+            $:
+              .: |
+                :host {
+                  --feature-border-radius: 0 !important;
+                }
+              "*:first-child":
+                $:
+                  ha-control-button:
+                    $: |
+                      .button {
+                        border-radius: 0 !important;
+                        background: var(--clr-background) !important;
+                        border: var(--border-width) solid var(--clr-background) !important;
+                      }
+                      .button::before {
+                        display: none;
+                      }
+                      .button[disabled] {
+                        background: var(--clr-background-card) !important;
+                      }
+                  ha-control-number-buttons:
+                    $: |
+                      .value {
+                        border-radius: 0 !important;
+                        background: var(--clr-background) !important;
+                        border: var(--border-width) solid var(--clr-background);
+                      }
+                      .value::before {
+                        display: none;
+                      }
+                  ha-control-slider:
+                    $: |
+                      .slider-track-bar {
+                        border-radius: 0 !important;
+                      }
+                      .slider-track-bar::after {
+                        border-radius: 0 !important;
+                      }
+                      .slider-track-cursor {
+                        border-radius: 0 !important;
+                        background: var(--clr-background-card) !important;
+                      }
+                      .slider-track-cursor::after {
+                        border-radius: 0 !important;
+                      }
+                  ha-control-select:
+                    .: |
+                      :host {
+                        border-radius: 0 !important;
+                        height: unset !important;
+                      }
+                    $: |
+                      .container {
+                        --feature-button-spacing: var(--spacing) !important;
+                        display: flex !important;
+                        gap: var(--feature-button-spacing);
+                      }
+                      .container::before {
+                        display: none;
+                      }
+                      .option {
+                        border: var(--border-width) solid var(--clr-background);
+                        height: unset !important;
+                      }
+                      .option:not(.selected) {
+                        background: var(--clr-background);
+                      }
+                  ha-control-select-menu:
+                    $: |
+                      .select-anchor {
+                        background: var(--clr-background) !important;
+                        border: var(--border-width) solid var(--clr-background);
+                      }
+                      .select-anchor::before {
+                        display: none;
+                      }
+      ha-state-control-humidifier-humidity:
+        $:
+          .: |
+            .buttons {
+              gap: var(--feature-button-spacing) !important;
+            }
+          ha-outlined-icon-button:
+            $: |
+              #button {
+                background: var(--clr-background);
+                border-radius: 0 !important;
+              }
+              #button.outlined {
+                --md-ripple-hover-color: var(--_outline-color);
+              }
+              #button.outlined::before {
+                display: none;
+              }
+              md-ripple {
+                margin: var(--border-width);
+              }
+      ha-state-control-climate-temperature:
+        $:
+          .: |
+            .buttons {
+              gap: var(--feature-button-spacing) !important;
+            }
+          ha-outlined-icon-button:
+            $: |
+              #button {
+                background: var(--clr-background);
+                border-radius: 0 !important;
+              }
+              #button.outlined {
+                --md-ripple-hover-color: var(--_outline-color);
+              }
+              #button.outlined::before {
+                display: none;
+              }
+              md-ripple {
+                margin: var(--border-width);
+              }
+      mmp-shortcuts:
+        $:
+          .mmp-shortcuts__buttons:
+            .: |
+              .mmp-shortcuts__button {
+                color: var(--clr-text);
+                border-radius: 0;
+                box-shadow: none;
+                transition: background .3s;
+                background: var(--clr-background);
+                border: var(--border-width) solid var(--clr-background);
+              }
+              .mmp-shortcuts__button:hover {
+                background: var(--clr-background-card);
+              }
 
   clr-primary: var(--clr-blue)
   rgb-primary: var(--rgb-blue)
@@ -154,668 +611,215 @@ Blocky: &base
   clr-quaternary: var(--clr-cyan)
   rgb-quaternary: var(--rgb-cyan)
 
-  # Main Interface Colors
-  divider-color: var(--clr-background)
-  primary-color: var(--clr-primary)
-  rgb-primary-color: var(--rgb-primary)
-  dark-primary-color: var(--clr-primary-dark)
-  rgb-dark-primary-color: var(--rgb-primary-dark)
-  light-primary-color: var(--clr-primary-light)
-  rgb-light-primary-color: var(--rgb-primary-light)
-  accent-color: var(--clr-secondary)
-  rgb-accent-color: var(--rgb-secondary)
-  accent-color-2: var(--clr-tertiary)
-  rgb-accent-color-2: var(--rgb-tertiary)
-  accent-color-3: var(--clr-quaternary)
-  rgb-accent-color-3: var(--rgb-quaternary)
-
-  error-color: var(--clr-red)
-  warning-color: var(--clr-orange)
-  success-color: var(--clr-green)
-  info-color: var(--clr-blue)
-  disabled-color: var(--clr-gray-darker)
-
-  rgb-primary-text-color: var(--rgb-text)
-  rgb-secondary-text-color: var(--rgb-text-secondary)
-  rgb-text-primary-color: var(--rgb-text)
-  rgb-card-background-color: var(--rgb-background-card)
-
-  light-theme-text-color: var(--clr-text)
-  light-theme-secondary-color: var(--clr-text-secondary)
-  light-theme-disabled-color: var(--clr-text-disabled)
-  light-theme-background-color: var(--clr-background)
-  light-theme-secondary-background-color: var(--clr-background-card)
-  dark-theme-base-color: var(--clr-black)
-
-  # Text Colors
-  text-primary-color: var(--clr-text)
-  primary-text-color: var(--text-primary-color)
-  secondary-text-color: var(--clr-text-secondary)
-  light-primary-text-color: var(--clr-text-secondary)
-  text-light-primary-color: var(--light-primary-text-color)
-  text-disabled-color: var(--clr-text-disabled)
-  disabled-text-color: var(--clr-text-disabled)
-  accent-text-color: var(--clr-gray)
-  text-accent-color: var(--accent-text-color)
-
-  lovelace-background: var(--clr-background)
-  primary-background-color: var(--clr-background)
-  secondary-background-color: var(--clr-background-card)
-
-  app-header-text-color: var(--clr-text)
-  app-header-selection-bar-color: var(--clr-gray)
-  app-header-edit-background-color: var(--clr-gray)
-  app-header-edit-text-color: var(--clr-text)
-  app-header-border-bottom: none
-  mdc-top-app-bar-fixed-box-shadow: none
-
-  # Sidebar Menu
-  sidebar-icon-color: var(--clr-text-secondary)
-  sidebar-text-color: var(--sidebar-icon-color)
-  sidebar-background-color: var(--clr-background-header)
-  sidebar-selected-icon-color: var(--primary-color)
-  sidebar-selected-text-color: var(--sidebar-selected-icon-color)
-
-  # Icons
-  paper-item-icon-color: var(--icon-primary-color)
-  paper-item-icon-active-color: var(--primary-color)
-  icon-primary-color: currentcolor
-  state-icon-color: var(--paper-item-icon-color)
-  state-icon-active-color: var(--paper-item-icon-active-color)
-  state-icon-unavailable-color: var(--disabled-text-color)
-  state-inactive-color: var(--clr-light-gray)
-
-  # Sliders
-  paper-slider-knob-color: var(--primary-color)
-  paper-slider-knob-start-color: var(--paper-slider-knob-color)
-  paper-slider-pin-color: var(--paper-slider-knob-color)
-  paper-slider-active-color: var(--paper-slider-knob-color)
-  paper-slider-secondary-color: var(--primary-color)
-
-  # Labels
-  label-badge-background-color: var(--clr-background-card)
-  label-badge-text-color: var(--clr-text)
-  label-badge-red: var(--clr-red)
-  label-badge-green: var(--clr-green)
-  label-badge-blue: var(--primary-color)
-  label-badge-yellow: var(--clr-yellow)
-  label-badge-grey: var(--clr-gray-lighter)
-
-  # Buttons
-  mdc-button-outline-color: var(--primary-color)
-  mdc-button-outline-width: 1px
-  mdc-button-disabled-ink-color: var(--disabled-text-color)
-
-  # Energy
-  energy-grid-consumption-color: var(--clr-purple)
-  energy-grid-return-color: var(--clr-green)
-  energy-solar-color: var(--clr-yellow)
-  energy-non-fossil-color: var(--clr-green)
-  energy-battery-out-color: var(--clr-red)
-  energy-battery-in-color: var(--clr-green)
-  energy-gas-color: var(--clr-deep-orange)
-  energy-water-color: var(--clr-blue)
-
-  # Cards
-  card-background-color: var(--clr-background-card)
-  ha-card-background: var(--clr-background-card)
-  ha-card-border-color: transparent
-  paper-dialog-background-color: var(--card-background-color)
-  paper-listbox-background-color: var(--card-background-color)
-  paper-card-background-color: var(--card-background-color)
-  ha-card-border-radius: 0
-  ha-config-card-border-radius: 0
-  ha-dialog-border-radius: 0
-  mdc-shape-small: 0
-  ha-card-border-width: 0
-
-  # Switches
-  switch-checked-button-color: var(--primary-color)
-  switch-checked-track-color: var(--primary-color)
-  switch-unchecked-button-color: var(--clr-gray)
-  switch-unchecked-track-color: var(--clr-dark-gray)
-  mdc-radio-unchecked-color: var(--clr-dark-gray)
-  mdc-radio-checked-color: var(--primary-color)
-
-  # Toggles
-  paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
-  paper-toggle-button-checked-bar-color: var(--switch-checked-track-color)
-  paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color)
-  paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
-
-  # Color Picker
-  ha-color-picker-wheel-borderwidth: var(--border-width)
-  ha-color-picker-wheel-bordercolor: var(--clr-background-card)
-  ha-color-picker-wheel-shadow: none
-  ha-color-picker-marker-borderwidth: var(--border-width)
-  ha-color-picker-marker-bordercolor: var(--clr-background-card)
-
-  # Table
-  table-row-background-color: var(--clr-background)
-  table-row-alternative-background-color: var(--clr-background-card)
-  data-table-background-color: var(--clr-background)
-
-  # Dropdowns
-  material-background-color: var(--clr-background-card)
-  material-secondary-background-color: var(--clr-background)
-  mdc-theme-surface: var(--clr-background-card)
-
-  # Pre/Code
-  markdown-code-background-color: var(--clr-background-card)
-  code-editor-background-color: var(--clr-background-card)
-
-  # Checkboxes
-  mdc-checkbox-unchecked-color: var(--clr-dark-gray)
-  mdc-checkbox-disable-color: var(--disabled-text-color)
-
-  # Input
-  input-fill-color: var(--clr-background-card)
-  input-dropdown-icon-color: var(--icon-primary-color)
-  input-ink-color: var(--clr-text)
-  input-label-ink-color: var(--clr-text)
-  input-idle-line-color: var(--clr-text)
-  input-hover-line-color: var(--primary-color)
-
-  mdc-select-fill-color: var(--input-fill-color)
-  mdc-select-ink-color: var(--input-ink-color)
-  mdc-select-label-ink-color: var(--input-label-ink-color)
-  mdc-select-idle-line-color: var(--input-idle-line-color)
-  mdc-select-dropdown-icon-color: var(--input-dropdown-icon-color)
-  mdc-select-hover-line-color: var(--input-hover-line-color)
-  mdc-text-field-fill-color: var(--input-fill-color)
-  mdc-text-field-ink-color: var(--input-ink-color)
-  mdc-text-field-label-ink-color: var(--input-label-ink-color)
-  mdc-text-field-idle-line-color: var(--input-idle-line-color)
-  mdc-text-field-dropdown-icon-color: var(--input-dropdown-icon-color)
-  mdc-text-field-hover-line-color: var(--input-hover-line-color)
-
-  feature-border-radius: 0
-  feature-height: 60px
-  feature-button-spacing: var(--spacing)
-  md-dialog-container-shape: 0
-  control-switch-border-radius: 0
-  control-select-border-radius: 0
-  control-select-button-border-radius: 0
-  control-select-background: var(--clr-background)
-
-  mini-media-player-button-color: rgba(var(--rgb-background), .6)
-  mini-media-player-overlay-color: rgba(var(--rgb-background-card), .8)
-  mini-media-player-overlay-base-color: var(--clr-text)
-  mini-media-player-overlay-accent-color: var(--clr-primary)
-  mini-media-player-overlay-info-color: var(--clr-secondary)
-  mini-media-player-overlay-color-stop: 75%
-  mini-media-player-progress-height: var(--border-width)
-
-  stack-card-gap: var(--gap-width)
-  grid-card-gap: var(--gap-width)
-  masonry-view-card-margin: calc(var(--gap-width) / 2) calc(var(--gap-width) / 2) var(--gap-width) calc(var(--gap-width) / 2)
-  ha-section-grid-row-height: 64px
-
-  # Card-Mod
-  card-mod-theme: "Blocky"
-
-  card-mod-sidebar-yaml: |
-    .: |
-      a.iron-selected paper-icon-item::before {
-        border-radius: 0;
-      }
-    a.profile paper-icon-item ha-user-badge:
-      $: |
-        .initials {
-          border-radius: 0 !important;
-          color: var(--clr-primary-dark) !important;
-        }
-
-  card-mod-view-yaml: |
-    "*:first-child":
-      $:
-        .: |
-          hui-view-badges {
-            margin-bottom: var(--spacing) !important;
-          }
-          div.edit-mode hui-card-options:hover {
-            outline: var(--border-width) solid var(--clr-dark-gray);
-          }
-        hui-view-badges:
-          $:
-            .: |
-              .badges {
-                gap: var(--gap-width) !important;
-              }
-            hui-entity-badge:
-              $:
-                ha-badge:
-                  $: |
-                    .badge {
-                      border-radius: 0 !important;
-                    }
-        hui-view-header:
-          $:
-            hui-view-badges:
-              $:
-                hui-entity-badge:
-                  $:
-                    ha-badge:
-                      $: |
-                        .badge {
-                          border-radius: 0 !important;
-                        }
-
-  card-mod-card-yaml: |
-    .: |
-      ha-card {
-        transition: none;
-      }
-      ha-card .container:has(hui-card-features):not(.horizontal) .content {
-        flex-grow: 0;
-      }
-      ha-card .container:not(.horizontal) hui-card-features {
-        margin-top: auto;
-      }
-      ha-card.type-tile {
-        padding: 7px;
-      }
-      ha-card.type-tile ha-ripple {
-        inset: var(--border-width);
-      }
-      ha-card.type-button,
-      ha-card.type-picture,
-      ha-card.type-picture-entity,
-      ha-card.type-picture-glance,
-      ha-card.type-picture-elements {
-        padding: var(--border-width);
-      }
-      ha-card.type-button ha-ripple,
-      ha-card.type-picture-entity .footer,
-      ha-card.type-picture-glance .box {
-        margin: var(--border-width);
-      }
-      ha-card.type-glance .entity:focus {
-        border-radius: 0 !important;
-        background: var(--clr-background);
-      }
-      ha-card.type-media-control,
-      ha-card.type-custom-mini-media-player {
-        border: var(--border-width) solid var(--clr-background-card);
-      }
-      ha-card.type-custom-mini-media-player .mmp-player {
-        padding-left: calc(16px - var(--border-width)) !important;
-        padding-right: calc(16px - var(--border-width)) !important;
-      }
-      ha-card.type-custom-mini-media-player[artwork*="full-cover"].--has-artwork .mmp-player {
-        background: linear-gradient(to top, rgba(var(--rgb-background-card), 1) calc(var(--border-width) * 1.5), rgba(var(--rgb-background-card), .8) 50%, rgba(var(--rgb-background-card), .4) 80%, rgba(var(--rgb-background-card), 0) 100%) !important;
-      }
-    ha-full-calendar:
-      $:
-        ha-button-toggle-group:
-          $: |
-            ha-icon-button {
-              border-radius: 0 !important;
-            }
-    ha-tile-icon:
-      .: |
-        ha-tile-icon {
-          padding: 8px !important;
-        }
-      $: |
-        .container {
-          --mdc-icon-size: 24px;
-          border-radius: 0 !important;
-          width: 40px !important;
-          height: 40px !important;
-        }
-    hui-card-features:
-      .: |
-        :host {
-          margin-top: auto;
-        }
-      $:
-        .: |
-          .container {
-            padding: 0 10px 10px 10px !important;
-          }
-        hui-card-feature:
-          $:
-            .: |
-              :host {
-                --feature-border-radius: 0 !important;
-              }
-            "*:first-child":
-              $:
-                ha-control-button:
-                  $: |
-                    .button {
-                      border-radius: 0 !important;
-                      background: var(--clr-background) !important;
-                      border: var(--border-width) solid var(--clr-background) !important;
-                    }
-                    .button::before {
-                      display: none;
-                    }
-                    .button[disabled] {
-                      background: var(--clr-background-card) !important;
-                    }
-                ha-control-number-buttons:
-                  $: |
-                    .value {
-                      border-radius: 0 !important;
-                      background: var(--clr-background) !important;
-                      border: var(--border-width) solid var(--clr-background);
-                    }
-                    .value::before {
-                      display: none;
-                    }
-                ha-control-slider:
-                  $: |
-                    .slider-track-bar {
-                      border-radius: 0 !important;
-                    }
-                    .slider-track-bar::after {
-                      border-radius: 0 !important;
-                    }
-                    .slider-track-cursor {
-                      border-radius: 0 !important;
-                      background: var(--clr-background-card) !important;
-                    }
-                    .slider-track-cursor::after {
-                      border-radius: 0 !important;
-                    }
-                ha-control-select:
-                  .: |
-                    :host {
-                      border-radius: 0 !important;
-                      height: unset !important;
-                    }
-                  $: |
-                    .container {
-                      --feature-button-spacing: var(--spacing) !important;
-                      display: flex !important;
-                      gap: var(--feature-button-spacing);
-                    }
-                    .container::before {
-                      display: none;
-                    }
-                    .option {
-                      border: var(--border-width) solid var(--clr-background);
-                      height: unset !important;
-                    }
-                    .option:not(.selected) {
-                      background: var(--clr-background);
-                    }
-                ha-control-select-menu:
-                  $: |
-                    .select-anchor {
-                      background: var(--clr-background) !important;
-                      border: var(--border-width) solid var(--clr-background);
-                    }
-                    .select-anchor::before {
-                      display: none;
-                    }
-    ha-state-control-humidifier-humidity:
-      $:
-        .: |
-          .buttons {
-            gap: var(--feature-button-spacing) !important;
-          }
-        ha-outlined-icon-button:
-          $: |
-            #button {
-              background: var(--clr-background);
-              border-radius: 0 !important;
-            }
-            #button.outlined {
-              --md-ripple-hover-color: var(--_outline-color);
-            }
-            #button.outlined::before {
-              display: none;
-            }
-            md-ripple {
-              margin: var(--border-width);
-            }
-    ha-state-control-climate-temperature:
-      $:
-        .: |
-          .buttons {
-            gap: var(--feature-button-spacing) !important;
-          }
-        ha-outlined-icon-button:
-          $: |
-            #button {
-              background: var(--clr-background);
-              border-radius: 0 !important;
-            }
-            #button.outlined {
-              --md-ripple-hover-color: var(--_outline-color);
-            }
-            #button.outlined::before {
-              display: none;
-            }
-            md-ripple {
-              margin: var(--border-width);
-            }
-    mmp-shortcuts:
-      $:
-        .mmp-shortcuts__buttons:
-          .: |
-            .mmp-shortcuts__button {
-              color: var(--clr-text);
-              border-radius: 0;
-              box-shadow: none;
-              transition: background .3s;
-              background: var(--clr-background);
-              border: var(--border-width) solid var(--clr-background);
-            }
-            .mmp-shortcuts__button:hover {
-              background: var(--clr-background-card);
-            }
-
   modes:
-    light: &light
-      rgb-background: var(--rgb-white)
-      rgb-background-card: var(--rgb-gray)
-      rgb-background-header: var(--rgb-background)
-      rgb-text: var(--rgb-black)
-      rgb-text-secondary: var(--rgb-dark-gray)
-      rgb-text-disabled: var(--rgb-light-gray)
+    light:
+      <<: &light
+        rgb-background: var(--rgb-white)
+        rgb-background-card: var(--rgb-gray)
+        rgb-background-header: var(--rgb-background)
+        rgb-text: var(--rgb-black)
+        rgb-text-secondary: var(--rgb-dark-gray)
+        rgb-text-disabled: var(--rgb-light-gray)
 
-      rgb-white: "255, 255, 255"
-      rgb-white-darker: "179, 179, 179"
-      rgb-white-lighter: "255, 255, 255"
+        rgb-white: "255, 255, 255"
+        rgb-white-darker: "179, 179, 179"
+        rgb-white-lighter: "255, 255, 255"
 
-      rgb-black: "0, 0, 0"
-      rgb-black-darker: "0, 0, 0"
-      rgb-black-lighter: "51, 51, 51"
+        rgb-black: "0, 0, 0"
+        rgb-black-darker: "0, 0, 0"
+        rgb-black-lighter: "51, 51, 51"
 
-      rgb-light-gray: "211, 211, 211"
-      rgb-light-gray-darker: "148, 148, 148"
-      rgb-light-gray-lighter: "255, 255, 255"
+        rgb-light-gray: "211, 211, 211"
+        rgb-light-gray-darker: "148, 148, 148"
+        rgb-light-gray-lighter: "255, 255, 255"
 
-      rgb-gray: "248, 248, 248"
-      rgb-gray-darker: "173, 173, 173"
-      rgb-gray-lighter: "255, 255, 255"
+        rgb-gray: "248, 248, 248"
+        rgb-gray-darker: "173, 173, 173"
+        rgb-gray-lighter: "255, 255, 255"
 
-      rgb-dark-gray: "95, 99, 104"
-      rgb-dark-gray-darker: "66, 69, 73"
-      rgb-dark-gray-lighter: "114, 119, 125"
+        rgb-dark-gray: "95, 99, 104"
+        rgb-dark-gray-darker: "66, 69, 73"
+        rgb-dark-gray-lighter: "114, 119, 125"
 
-      rgb-red: "178, 34, 34"
-      rgb-red-darker: "124, 24, 24"
-      rgb-red-lighter: "213, 68, 68"
+        rgb-red: "178, 34, 34"
+        rgb-red-darker: "124, 24, 24"
+        rgb-red-lighter: "213, 68, 68"
 
-      rgb-pink: "255, 105, 180"
-      rgb-pink-darker: "179, 73, 126"
-      rgb-pink-lighter: "255, 147, 216"
+        rgb-pink: "255, 105, 180"
+        rgb-pink-darker: "179, 73, 126"
+        rgb-pink-lighter: "255, 147, 216"
 
-      rgb-orange: "255, 165, 0"
-      rgb-orange-darker: "179, 115, 0"
-      rgb-orange-lighter: "255, 198, 51"
+        rgb-orange: "255, 165, 0"
+        rgb-orange-darker: "179, 115, 0"
+        rgb-orange-lighter: "255, 198, 51"
 
-      rgb-yellow: "218, 165, 32"
-      rgb-yellow-darker: "153, 115, 22"
-      rgb-yellow-lighter: "255, 198, 77"
+        rgb-yellow: "218, 165, 32"
+        rgb-yellow-darker: "153, 115, 22"
+        rgb-yellow-lighter: "255, 198, 77"
 
-      rgb-blue: "30, 144, 255"
-      rgb-blue-darker: "21, 101, 179"
-      rgb-blue-lighter: "79, 180, 255"
+        rgb-blue: "30, 144, 255"
+        rgb-blue-darker: "21, 101, 179"
+        rgb-blue-lighter: "79, 180, 255"
 
-      rgb-teal: "0, 128, 128"
-      rgb-teal-darker: "0, 90, 90"
-      rgb-teal-lighter: "51, 153, 153"
+        rgb-teal: "0, 128, 128"
+        rgb-teal-darker: "0, 90, 90"
+        rgb-teal-lighter: "51, 153, 153"
 
-      rgb-green: "34, 139, 34"
-      rgb-green-darker: "24, 97, 24"
-      rgb-green-lighter: "68, 167, 68"
+        rgb-green: "34, 139, 34"
+        rgb-green-darker: "24, 97, 24"
+        rgb-green-lighter: "68, 167, 68"
 
-      rgb-brown: "139, 69, 19"
-      rgb-brown-darker: "97, 48, 13"
-      rgb-brown-lighter: "167, 103, 51"
+        rgb-brown: "139, 69, 19"
+        rgb-brown-darker: "97, 48, 13"
+        rgb-brown-lighter: "167, 103, 51"
 
-      rgb-purple: "128, 0, 128"
-      rgb-purple-darker: "90, 0, 90"
-      rgb-purple-lighter: "153, 51, 153"
+        rgb-purple: "128, 0, 128"
+        rgb-purple-darker: "90, 0, 90"
+        rgb-purple-lighter: "153, 51, 153"
 
-      rgb-deep-purple: "75, 0, 130"
-      rgb-deep-purple-darker: "52, 0, 91"
-      rgb-deep-purple-lighter: "102, 51, 153"
+        rgb-deep-purple: "75, 0, 130"
+        rgb-deep-purple-darker: "52, 0, 91"
+        rgb-deep-purple-lighter: "102, 51, 153"
 
-      rgb-indigo: "75, 0, 130"
-      rgb-indigo-darker: "52, 0, 91"
-      rgb-indigo-lighter: "102, 51, 153"
+        rgb-indigo: "75, 0, 130"
+        rgb-indigo-darker: "52, 0, 91"
+        rgb-indigo-lighter: "102, 51, 153"
 
-      rgb-light-blue: "173, 216, 230"
-      rgb-light-blue-darker: "121, 151, 161"
-      rgb-light-blue-lighter: "207, 232, 242"
+        rgb-light-blue: "173, 216, 230"
+        rgb-light-blue-darker: "121, 151, 161"
+        rgb-light-blue-lighter: "207, 232, 242"
 
-      rgb-cyan: "0, 255, 255"
-      rgb-cyan-darker: "0, 179, 179"
-      rgb-cyan-lighter: "51, 255, 255"
+        rgb-cyan: "0, 255, 255"
+        rgb-cyan-darker: "0, 179, 179"
+        rgb-cyan-lighter: "51, 255, 255"
 
-      rgb-light-green: "144, 238, 144"
-      rgb-light-green-darker: "101, 167, 101"
-      rgb-light-green-lighter: "173, 255, 173"
+        rgb-light-green: "144, 238, 144"
+        rgb-light-green-darker: "101, 167, 101"
+        rgb-light-green-lighter: "173, 255, 173"
 
-      rgb-lime: "50, 205, 50"
-      rgb-lime-darker: "35, 144, 35"
-      rgb-lime-lighter: "101, 255, 101"
+        rgb-lime: "50, 205, 50"
+        rgb-lime-darker: "35, 144, 35"
+        rgb-lime-lighter: "101, 255, 101"
 
-      rgb-amber: "255, 191, 0"
-      rgb-amber-darker: "179, 134, 0"
-      rgb-amber-lighter: "255, 217, 51"
+        rgb-amber: "255, 191, 0"
+        rgb-amber-darker: "179, 134, 0"
+        rgb-amber-lighter: "255, 217, 51"
 
-      rgb-deep-orange: "255, 69, 0"
-      rgb-deep-orange-darker: "179, 48, 0"
-      rgb-deep-orange-lighter: "255, 111, 51"
+        rgb-deep-orange: "255, 69, 0"
+        rgb-deep-orange-darker: "179, 48, 0"
+        rgb-deep-orange-lighter: "255, 111, 51"
 
-      rgb-blue-grey: "119, 136, 153"
-      rgb-blue-grey-darker: "83, 95, 107"
-      rgb-blue-grey-lighter: "143, 163, 183"
+        rgb-blue-grey: "119, 136, 153"
+        rgb-blue-grey-darker: "83, 95, 107"
+        rgb-blue-grey-lighter: "143, 163, 183"
 
-      app-header-background-color: "#FFFFFF" #The RGB value of rgb-background as variables aren't supported in this field
+        app-header-background-color: "#FFFFFF" #The RGB value of rgb-background as variables aren't supported in this field
+
       primary-color: "#1E90FF" #The RGB value of rgb-blue as variables aren't supported in this field
 
-    dark: &dark
-      rgb-background: var(--rgb-black)
-      rgb-background-card: var(--rgb-gray)
-      rgb-background-header: var(--rgb-background)
-      rgb-text: var(--rgb-white)
-      rgb-text-secondary: var(--rgb-white-darker)
-      rgb-text-disabled: var(--rgb-light-gray)
+    dark:
+      <<: &dark
+        rgb-background: var(--rgb-black)
+        rgb-background-card: var(--rgb-gray)
+        rgb-background-header: var(--rgb-background)
+        rgb-text: var(--rgb-white)
+        rgb-text-secondary: var(--rgb-white-darker)
+        rgb-text-disabled: var(--rgb-light-gray)
 
-      rgb-white: "208, 208, 208"
-      rgb-white-darker: "147, 147, 147"
-      rgb-white-lighter: "255, 255, 255"
+        rgb-white: "208, 208, 208"
+        rgb-white-darker: "147, 147, 147"
+        rgb-white-lighter: "255, 255, 255"
 
-      rgb-black: "29, 29, 29"
-      rgb-black-darker: "0, 0, 0"
-      rgb-black-lighter: "51, 51, 51"
+        rgb-black: "29, 29, 29"
+        rgb-black-darker: "0, 0, 0"
+        rgb-black-lighter: "51, 51, 51"
 
-      rgb-light-gray: "140, 140, 140"
-      rgb-light-gray-darker: "98, 98, 98"
-      rgb-light-gray-lighter: "168, 168, 168"
+        rgb-light-gray: "140, 140, 140"
+        rgb-light-gray-darker: "98, 98, 98"
+        rgb-light-gray-lighter: "168, 168, 168"
 
-      rgb-gray: "39, 39, 39"
-      rgb-gray-darker: "27, 27, 27"
-      rgb-gray-lighter: "47, 47, 47"
+        rgb-gray: "39, 39, 39"
+        rgb-gray-darker: "27, 27, 27"
+        rgb-gray-lighter: "47, 47, 47"
 
-      rgb-dark-gray: "95, 99, 104"
-      rgb-dark-gray-darker: "66, 69, 73"
-      rgb-dark-gray-lighter: "114, 119, 125"
+        rgb-dark-gray: "95, 99, 104"
+        rgb-dark-gray-darker: "66, 69, 73"
+        rgb-dark-gray-lighter: "114, 119, 125"
 
-      rgb-red: "255, 99, 71"
-      rgb-red-darker: "178, 34, 34"
-      rgb-red-lighter: "255, 105, 97"
+        rgb-red: "255, 99, 71"
+        rgb-red-darker: "178, 34, 34"
+        rgb-red-lighter: "255, 105, 97"
 
-      rgb-pink: "255, 192, 203"
-      rgb-pink-darker: "255, 105, 180"
-      rgb-pink-lighter: "255, 147, 216"
+        rgb-pink: "255, 192, 203"
+        rgb-pink-darker: "255, 105, 180"
+        rgb-pink-lighter: "255, 147, 216"
 
-      rgb-orange: "255, 140, 0"
-      rgb-orange-darker: "255, 165, 0"
-      rgb-orange-lighter: "255, 198, 51"
+        rgb-orange: "255, 140, 0"
+        rgb-orange-darker: "255, 165, 0"
+        rgb-orange-lighter: "255, 198, 51"
 
-      rgb-yellow: "255, 215, 0"
-      rgb-yellow-darker: "218, 165, 32"
-      rgb-yellow-lighter: "255, 230, 77"
+        rgb-yellow: "255, 215, 0"
+        rgb-yellow-darker: "218, 165, 32"
+        rgb-yellow-lighter: "255, 230, 77"
 
-      rgb-blue: "30, 144, 255"
-      rgb-blue-darker: "21, 101, 179"
-      rgb-blue-lighter: "79, 180, 255"
+        rgb-blue: "30, 144, 255"
+        rgb-blue-darker: "21, 101, 179"
+        rgb-blue-lighter: "79, 180, 255"
 
-      rgb-teal: "32, 178, 170"
-      rgb-teal-darker: "0, 128, 128"
-      rgb-teal-lighter: "51, 204, 204"
+        rgb-teal: "32, 178, 170"
+        rgb-teal-darker: "0, 128, 128"
+        rgb-teal-lighter: "51, 204, 204"
 
-      rgb-green: "50, 205, 50"
-      rgb-green-darker: "34, 139, 34"
-      rgb-green-lighter: "68, 167, 68"
+        rgb-green: "50, 205, 50"
+        rgb-green-darker: "34, 139, 34"
+        rgb-green-lighter: "68, 167, 68"
 
-      rgb-brown: "139, 69, 19"
-      rgb-brown-darker: "97, 48, 13"
-      rgb-brown-lighter: "167, 103, 51"
+        rgb-brown: "139, 69, 19"
+        rgb-brown-darker: "97, 48, 13"
+        rgb-brown-lighter: "167, 103, 51"
 
-      rgb-purple: "147, 112, 219"
-      rgb-purple-darker: "128, 0, 128"
-      rgb-purple-lighter: "153, 51, 153"
+        rgb-purple: "147, 112, 219"
+        rgb-purple-darker: "128, 0, 128"
+        rgb-purple-lighter: "153, 51, 153"
 
-      rgb-deep-purple: "138, 43, 226"
-      rgb-deep-purple-darker: "75, 0, 130"
-      rgb-deep-purple-lighter: "102, 51, 153"
+        rgb-deep-purple: "138, 43, 226"
+        rgb-deep-purple-darker: "75, 0, 130"
+        rgb-deep-purple-lighter: "102, 51, 153"
 
-      rgb-indigo: "75, 0, 130"
-      rgb-indigo-darker: "52, 0, 91"
-      rgb-indigo-lighter: "102, 51, 153"
+        rgb-indigo: "75, 0, 130"
+        rgb-indigo-darker: "52, 0, 91"
+        rgb-indigo-lighter: "102, 51, 153"
 
-      rgb-light-blue: "173, 216, 230"
-      rgb-light-blue-darker: "121, 151, 161"
-      rgb-light-blue-lighter: "207, 232, 242"
+        rgb-light-blue: "173, 216, 230"
+        rgb-light-blue-darker: "121, 151, 161"
+        rgb-light-blue-lighter: "207, 232, 242"
 
-      rgb-cyan: "0, 191, 255"
-      rgb-cyan-darker: "0, 135, 179"
-      rgb-cyan-lighter: "51, 204, 255"
+        rgb-cyan: "0, 191, 255"
+        rgb-cyan-darker: "0, 135, 179"
+        rgb-cyan-lighter: "51, 204, 255"
 
-      rgb-light-green: "144, 238, 144"
-      rgb-light-green-darker: "101, 167, 101"
-      rgb-light-green-lighter: "173, 255, 173"
+        rgb-light-green: "144, 238, 144"
+        rgb-light-green-darker: "101, 167, 101"
+        rgb-light-green-lighter: "173, 255, 173"
 
-      rgb-lime: "50, 205, 50"
-      rgb-lime-darker: "35, 144, 35"
-      rgb-lime-lighter: "101, 255, 101"
+        rgb-lime: "50, 205, 50"
+        rgb-lime-darker: "35, 144, 35"
+        rgb-lime-lighter: "101, 255, 101"
 
-      rgb-amber: "255, 191, 0"
-      rgb-amber-darker: "179, 134, 0"
-      rgb-amber-lighter: "255, 217, 51"
+        rgb-amber: "255, 191, 0"
+        rgb-amber-darker: "179, 134, 0"
+        rgb-amber-lighter: "255, 217, 51"
 
-      rgb-deep-orange: "255, 69, 0"
-      rgb-deep-orange-darker: "179, 48, 0"
-      rgb-deep-orange-lighter: "255, 111, 51"
+        rgb-deep-orange: "255, 69, 0"
+        rgb-deep-orange-darker: "179, 48, 0"
+        rgb-deep-orange-lighter: "255, 111, 51"
 
-      rgb-blue-grey: "176, 196, 222"
-      rgb-blue-grey-darker: "123, 140, 158"
-      rgb-blue-grey-lighter: "191, 210, 230"
+        rgb-blue-grey: "176, 196, 222"
+        rgb-blue-grey-darker: "123, 140, 158"
+        rgb-blue-grey-lighter: "191, 210, 230"
 
-      app-header-background-color: "#1D1D1D" #The RGB value of rgb-background as variables aren't supported in this field
+        app-header-background-color: "#1D1D1D" #The RGB value of rgb-background as variables aren't supported in this field
       primary-color: "#1E90FF" #The RGB value of rgb-blue as variables aren't supported in this field
-
 Blocky Red:
   <<: *base
 
