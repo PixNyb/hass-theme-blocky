@@ -57,7 +57,7 @@ sudo apt-get install -y \
     grep -qxF '    - 127.0.0.1' ~/.homeassistant/configuration.yaml || echo "    - 127.0.0.1" >> ~/.homeassistant/configuration.yaml
     grep -qxF '    - ::1' ~/.homeassistant/configuration.yaml || echo "    - ::1" >> ~/.homeassistant/configuration.yaml
     grep -qxF '    - 172.0.0.0/8' ~/.homeassistant/configuration.yaml || echo "    - 172.0.0.0/8" >> ~/.homeassistant/configuration.yaml
-    grep -qxF '    - 10.0.0.0/16' ~/.homeassistant/configuration.yaml || echo "    - 10.0.0.0/16" >> ~/.homeassistant/configuration.yaml
+    grep -qxF '    - 10.0.0.0/8' ~/.homeassistant/configuration.yaml || echo "    - 10.0.0.0/8" >> ~/.homeassistant/configuration.yaml
     grep -qxF '    - 192.168.0.0/16' ~/.homeassistant/configuration.yaml || echo "    - 192.168.0.0/16" >> ~/.homeassistant/configuration.yaml
 
     # Install the Home Assistant Community Store (HACS)
